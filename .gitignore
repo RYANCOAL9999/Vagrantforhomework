@@ -1,0 +1,16 @@
+/dem1/mydem1/web/code_quickstart/nbproject/private/
+/dem1/html/code_quickstart/nbproject/private/
+
+$ git status
+[...]
+# Untracked files:
+[...]
+#       dem1/.vagrant/machines/dem1/virtualbox/action_provision
+#       dem1/.vagrant/machines/dem1/virtualbox/action_set_name
+#       dem1/.vagrant/machines/dem1/virtualbox/creator_uid
+#       dem1/.vagrant/machines/dem1/virtualbox/id
+#       dem1/.vagrant/machines/dem1/virtualbox/index_uuid
+#       dem1/.vagrant/machines/dem1/virtualbox/synced_folders
+#       dem1/puphpet/config.yaml
+#       dem1/html/.DS-Store
+#       dem1/html/index.html
