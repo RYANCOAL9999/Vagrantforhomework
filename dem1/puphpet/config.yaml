@@ -341,7 +341,7 @@ mysql:
     install: '1'
     settings:
         version: '5.5'
-        root_password: '123'
+        root_password: ‘123’
         override_options: {  }
     adminer: 0
     users:
