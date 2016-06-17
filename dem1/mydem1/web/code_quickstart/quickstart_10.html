@@ -1,29 +1,30 @@
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<!DOCTYPE html>
 <html>
     <head>
+        <title>loading  Registration</title>
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <title>loading  Registration</title>
-        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script type="text/javascript" src="Dem1.js"></script>
     </head>
     <body>
-      <form action='' method='get'>
-        Your full Name:<span id='20'></span><br>
-        <input type='text' name='name' id='0' value=''>
-            <div class='TEST'>test div</div>
-            <br>
-        Email:<span id='21'></span><br>
-        <input type='email' name='useremail' id='1' value=''>
-            <div class='ABC'>test div</div>
-            <br>
-        Type in new password:<span id='22'></span><br>
-        <input type='text' name='password' id='2' value='' >
-            <div class='DEF'>test div</div>
-            <br>
-        <p>
-            <input type='submit' id='submit' name='submit' value='submit'>
-        </p>
+        <form action="quickstart_10.php" method="post" name="Registration">
+            Your full Name:<span id="20"></span><br>
+            <input type="text" name="name" id="0" onblur="validate()" >
+                <span class="TEST"></span>
+                <br><br>
+            Email:<span id="21"></span><br>
+            <input type="email" name="useremail" id="1" onblur="validate1()">
+                <span class="ABC"></span>
+                <br><br>
+            Type in new password:<span id="22"></span><br>
+            <input type="text" name="password" id="2" onblur="validate2()">
+                <span class="DEF"></span>
+                <br><br>
+            <input type="hidden" name="GEN" id="GEN" class="GEN" value="1234567890"> 
+            <p>
+                <input type="submit" name="submit" value="submit" onclick="msg()" />
+            </p> 
         </form>
-        <script src='Dem1.js'></script>
   </body>
 </html>

@@ -1,26 +1,27 @@
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<!DOCTYPE html>
 <html>
     <head>
+        <title>loading Login</title>
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <title>loading Login</title>
-        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script type="text/javascript" src="Dem1.js"></script>
     </head>
     <body>
-        <form id='myForm2'>
-            Customer ID:<span id='23'></span><br>
-            <input type='text' name='name' id='3' value=''>
-                <div class='RTY'>test div</div>
-                <br>
-            Type in your password:<span id='24'></span><br>
-            <input type='text' name='pwd' id='4' value='' >
-                <div class='JDK'>test div</div>
-                <br>
+        <form action="quickstart_11.php" method="post" name="Login">
+            Customer ID:<span id="23"></span><br>
+            <input type="text" name="name" id="3" onblur="validate3()" >
+                <span class="RTY"></span>
+                <br><br>
+            Type in your password:<span id="24"></span><br>
+            <input type="text" name="pwd" id="4" onblur="validate4()">
+                <span class="JDK"></span>
+                <br><br>
+            <input type="hidden" name="JKL" id="JKL" class="JKL" value="0"> 
             <p>
-                <input type='submit' id='100' value='submit'>
+                <input type="submit" name="submit" value="submit" onclick="changeContent()"/>
             </p>
+            
         </form>
-        <script src='Dem1.js'></script>
     </body>
 </html>
-
