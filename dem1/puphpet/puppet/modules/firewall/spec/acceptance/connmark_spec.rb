@@ -7,7 +7,7 @@ describe 'firewall type' do
       it 'applies' do
         pp = <<-EOS
           class { '::firewall': }
-          firewall { '502 - test':
+          firewall { '501 - test':
             proto    => 'all',
 	    connmark => '0x1',
             action   => reject,
@@ -19,7 +19,7 @@ describe 'firewall type' do
 
       it 'should contain the rule' do
         shell('iptables-save') do |r|
-          expect(r.stdout).to match(/-A INPUT -m comment --comment "502 - test" -m connmark --mark 0x1 -j REJECT --reject-with icmp-port-unreachable/)
+          expect(r.stdout).to match(/-A INPUT -m comment --comment "501 - test" -m connmark --mark 0x1 -j REJECT --reject-with icmp-port-unreachable/)
         end
       end
     end

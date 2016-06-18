@@ -340,8 +340,8 @@ mariadb:
 mysql:
     install: '1'
     settings:
-        version: '5.5'
-        root_password: ‘123’
+        version: '5.6'
+        root_password: ‘password’
         override_options: {  }
     adminer: 0
     users:

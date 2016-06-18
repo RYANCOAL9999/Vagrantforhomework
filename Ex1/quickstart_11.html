@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>loading Login</title>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script type="text/javascript" src="Dem1.js"></script>
+        <script type="text/javascript" src="mouseOverandOut.js"></script>
+    </head>
+    <body>
+        <form action="" id="myForm" method="post" name="Login">
+            Customer ID:<span id="23"></span><br>
+            <input type="text" name="CustomerID" id="3" onblur="validate('CustomerID',this.value)" >
+                <span id="CustomerID"></span>
+                <br><br>
+            Type in your password:<span id="24"></span><br>
+            <input type="text" name="pwd" id="4" onblur="validate('pwd',this.vlaue)">
+                <span id="pwd"></span>
+                <br><br>
+            <input type="hidden" name="JKL" id="JKL" class="JKL" value="0"> 
+            <p>
+                <input type="button" name="submit" value="submit" onclick="changeContent()"/>
+            </p>
+            
+        </form>
+    </body>
+</html>
