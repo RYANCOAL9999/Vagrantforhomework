@@ -11,7 +11,7 @@ if(isset($_POST['name'])){
     $result = mysqli_query($connection,$query);
 
     echo 'successful';
-    //header("Location:index.html");
+    header("Location:index.html");
 
 }
 
