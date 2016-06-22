@@ -1,5 +1,4 @@
 var text = "";
-
 //Gen random number for CustomerID
 $(document).ready(function(){
     var possible = $("input.GEN").val();
@@ -11,6 +10,8 @@ $(document).ready(function(){
 
 //Use ajax to get php for validation to checking Input things is correct
 function validate(field,query){
+    //console.log(query);
+    //console.log(field);
     var xmlhttp;
     if (window.XMLHttpRequest) { // for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
@@ -23,13 +24,17 @@ function validate(field,query){
         } else if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             document.getElementById(field).innerHTML = xmlhttp.responseText;
         } else {
-        document.getElementById(field).innerHTML = "Error Occurred. <a href='index.php'>Reload Or Try Again</a> the page.";
+            document.getElementById(field).innerHTML = "Error Occurred. <a href='index.php'>Reload Or Try Again</a> the page.";
         }
     }
     xmlhttp.open("GET", "validation.php?field=" + field + "&query=" + query, false);
     xmlhttp.send();
+   
     
 }
+
+
+
 
 //post the text into hidden Object
 function msg(){    
