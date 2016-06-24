@@ -3,7 +3,7 @@ $value = $_GET['query'];
 $formfield = $_GET['field'];
 //Check name length is/isnot small than 5 alphabets;
 if($formfield =="name"){
-     if ( strlen($value) <= 5 || !ctype_alpha($value)){
+     if ( strlen($value) <= 5 && !ctype_alpha($value)){
         echo "Error : At least 5 alphabets";
     }
 }
