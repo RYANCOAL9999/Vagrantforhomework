@@ -7,8 +7,8 @@ $(document).ready(function(){ 
     }     
     $("input.GEN").val(text); }
 );  
-//Use ajax to get php for validation to checking Input things is correct function 
-validate(field,query){     
+//Use ajax to get php for validation to checking Input things is correct 
+function validate(field,query){     
     console.log(query);     
     console.log(field);     
     var xmlhttp;     
