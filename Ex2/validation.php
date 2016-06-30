@@ -1,8 +1,6 @@
 <?php
-
 $value = $_GET['query'];
 $formfield = $_GET['field'];
-
 //check validation with input customerID 
 if($formfield == "customerID"){
     if ( strlen($value) < 7 || !ctype_alpha($value) ){
@@ -15,7 +13,5 @@ if($formfield == "password"){
         echo "Error: password should be 6 digits";
     } 
 }
-
-
 ?>
 
