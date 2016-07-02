@@ -2,7 +2,7 @@
 $value = $_GET['query'];
 $formfield = $_GET['field'];
 
-if(isset($formfield){
+if(isset($formfield)){
 	//check validation with input customerID
 	if($formfield == "customerID"){
 		if ( strlen($value) < 7 || !ctype_alpha($value) ){
