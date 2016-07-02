@@ -69,7 +69,7 @@ function buymsg(){
         var film = $("#"+i).find(".Film").text();
         var date = $("#"+i).find(".Date").text();
         var time = $("#"+i).find(".Time").text();
-        var money =$("#"+i).find(".Money").text();
+        var money = $("#"+i).find(".Money").text().substring(1,3);
         var values = $("#"+i).find(".Values").val();
         total += values*40;
         var messages;
@@ -77,7 +77,7 @@ function buymsg(){
             messages = "<tr><td align='left'>Film : "+ film 
                         + " Date/Time :" + date + "/" + time
                         + " Number of Tickets :" + values
-                        + " Subtotal : " + values * 40 + ".00</td><tr>";
+                        + " Subtotal : " + values * money + ".00</td><tr>";
             abc.push(messages);
         }
    
