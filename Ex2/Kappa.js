@@ -74,7 +74,7 @@ function buymsg(){
         total += values*40;
         var messages;
         if(values){
-            messages = "<tr><td align='center'>Film : "+ film 
+            messages = "<tr><td align='left'>Film : "+ film 
                         + " Date/Time :" + date + "/" + time
                         + " Number of Tickets :" + values
                         + " Subtotal : " + values * 40 + ".00</td><tr>";
