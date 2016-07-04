@@ -2,7 +2,7 @@ CREATE DATABASE ZZZInternationalAirport;
 
 CREATE TABLE Arrival (
   Time varchar(5),
-  Flight varchar(255),
+  Flight varchar(6),
   Origin varchar(255),
   Airline varchar(255),
   Hall varchar(1),
@@ -33,7 +33,7 @@ INSERT INTO Arrival (Time, Flight, Origin, Airline, Hall, Status) VALUES
 
 CREATE TABLE Departure (
   Time varchar(5),
-  Flight varchar(255),
+  Flight varchar(6),
   Destination varchar(255),
   Terminal varchar(2),
   Gate int(3),
