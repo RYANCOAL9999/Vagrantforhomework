@@ -25,7 +25,7 @@
         </div>  
         <?php
         date_default_timezone_set("Asia/Hong_Kong");
-        echo date("Y-m-d") ."&nbsp". date("h:i:s");
+        echo date("Y-m-d") ."&nbsp". date("h:i");
         ?>
         <p></p>
     </body>
