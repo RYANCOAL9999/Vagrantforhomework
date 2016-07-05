@@ -54,5 +54,5 @@ INSERT INTO Departure (Time, Flight, Destination, Terminal, Gate, Status) VALUES
 ('20:55', 'BR 858', 'Taipei', 'T1 ', 32, 'BoardingSoon'),
 ('21:00', '5J 115', 'Manila', 'T1 ', 201, 'BoardingSoon'),
 ('21:05', 'HX 128', 'Hangzhou', 'T1 ', 217, 'Est 21:35'),
-('21:10', 'FD 525', 'Phunket', 'T2 ', 203, 'BoardingSoon'),
+('21:10', 'FD 525', 'Phuket', 'T2 ', 203, 'BoardingSoon'),
 ('21:10', 'KQ861', 'BangKok', 'T1 ', 27, 'Est 21:00');
