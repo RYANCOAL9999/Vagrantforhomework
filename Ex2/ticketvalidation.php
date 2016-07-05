@@ -71,7 +71,7 @@ if(isset($formfield)){
 	}
 	//check Inventory for column4 with third film 
 	if($formfield =="Way4"){
-		if ( !is_numeric($value) || strpos($value, "0")!== false){
+		if ( !is_numeric($value) || strpos($value, "0")!== false ){
 			echo "Error :  Number of Tickets should be digits";
 		}
 	}
