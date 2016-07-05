@@ -11,7 +11,7 @@ if(isset($formfield)){
 	}
 	//check validation with input password
 	if($formfield == "password"){
-		if( strlen($value) != 6 || !is_numeric($value) || strpos($value, "0")!== false ){
+		if( strlen($value) != 6 || !is_numeric($value) ){
 			echo "Error: password should be 6 digits";
 		} 
 	}
