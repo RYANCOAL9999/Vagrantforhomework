@@ -57,7 +57,9 @@ $(document).ready(function(){
 });
 //handle json with Arrival.php
 function myFunction(jsonText){
+    //assign the jsonText to json
     var arr = JSON.parse(jsonText);
+    //match html table with json field
     var out = "<table border='1' style='50'><tr><td style='background-color:aqua'>Time</td><td style='background-color:aqua'>Flight</td><td style='background-color:aqua'>Origin</td><td style='background-color:aqua'>Airline</td><td style='background-color:aqua'>Hall</td><td style='background-color:aqua'>Status</td></tr>";
     for(var i =0;i < arr.length;i++){
        out += "<tr><td>" 
@@ -75,11 +77,14 @@ function myFunction(jsonText){
            + "</td><tr>";
     }
     out += "</table>";
+    //print out table
     $("p").html(out);
 }
 //handle json with Departure.php
 function testFunction(jsonText){
+    //assign the jsonText to json
     var arr = JSON.parse(jsonText);
+    //match html table with json field
     var out = "<table border='1' style='50'><tr><td style='background-color:yellow'>Time</td><td style='background-color:yellow'>Flight</td><td style='background-color:yellow'>Destination</td><td style='background-color:yellow'>Terminal</td><td style='background-color:yellow'>Gate</td><td style='background-color:yellow'>Status</td></tr>";
     for(var i =0;i < arr.length;i++){
        out += "<tr><td>" 
@@ -97,6 +102,7 @@ function testFunction(jsonText){
            + "</td><tr>";
     }
     out += "</table>";
+    //print out table
     $("p").html(out);
     
 }
