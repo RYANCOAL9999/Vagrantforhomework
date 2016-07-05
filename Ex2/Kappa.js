@@ -64,7 +64,7 @@ function buymsg(){
     var abc = [];
     var messagebox="";
     var total = 0;
-    //archieve data for table columns
+    //archive data for table columns
     for(var i =1; i <=12;i++){
         var film = $("#"+i).find(".Film").text();
         var date = $("#"+i).find(".Date").text();
