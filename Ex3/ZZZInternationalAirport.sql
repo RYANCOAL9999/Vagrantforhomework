@@ -1,4 +1,4 @@
-CREATE DATABASE ZZZInternationalAirport IF NOT EXISTS ZZZInternationalAirport;
+CREATE DATABASE IF NOT EXISTS ZZZInternationalAirport;
 
 USE ZZZInternationalAirport;
 
