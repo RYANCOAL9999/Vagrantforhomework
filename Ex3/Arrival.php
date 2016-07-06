@@ -13,7 +13,7 @@ if($result -> num_rows > 0){
         $emptyarray[] = $row;
     }
 }
-
+//print out json with emptyarray
 echo json_encode($emptyarray);
 
 
