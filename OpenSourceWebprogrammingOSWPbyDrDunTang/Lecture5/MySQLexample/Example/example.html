@@ -1,0 +1,52 @@
+<html>
+ 	<head>
+	    <title>Ex5</title>
+		<style>
+		h1 {
+    			text-align: center;
+    			font-size: 5.4em;
+    			margin: 0px auto;
+    			padding: 0px 0px 5px 0px;  
+    			width: 50%;
+    			display:inline-block;
+		}
+		</style>
+	    
+	    <script type="text/javascript">
+	    	function focus()
+	    	{
+	    		var inputBox = document.getElementById("ky");
+	    		inputBox.focus();
+	    	}
+	    </script>
+		<script type="text/javascript" src="bk.js"></script>
+ 	</head>
+ 	<body onload="focus()">
+';
+
+<img src=image.png width=240 height=200><h1>ABC Books</h1>
+		<div>
+			<form>
+				<p>Book Search:</p>
+				<p>
+					For book title search, please enter the title of the book.<br>
+					For author search, please enter the name of the author.<br>
+					For ISBN search, please enter the ISBN number.
+				</p>
+				<p>
+					<input type="text" id="ky" name="ky"></input><br>
+					<input type="radio" name="choice" id="Title" value="Title" checked>Title Search</input>
+					<input type="radio" name="choice" id="Author" value="Author">Author Search</input>
+					<input type="radio" name="choice" id="ISBN" value="ISBN">ISBN Search</input>
+					<input type="button" id="search" name="search" value="Search" onclick="searchbook()"></input>
+				</p>
+				<p>
+					<span style="display:none" id="MsgSearchValue" name="MsgSearchValue"></span><br />
+				</p>
+				<p>
+					<span style="display:none" id="MsgResults" name="MsgResults"></span><br />
+				</p>
+			</form>
+		</div>
+	</body>
+</html>

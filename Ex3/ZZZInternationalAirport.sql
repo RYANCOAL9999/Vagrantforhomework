@@ -1,5 +1,8 @@
-CREATE DATABASE ZZZInternationalAirport;
+CREATE DATABASE ZZZInternationalAirport IF NOT EXISTS ZZZInternationalAirport;
 
+USE ZZZInternationalAirport;
+
+//Time may be use TimeStamp
 CREATE TABLE Arrival (
   Time varchar(5),
   Flight varchar(6),
@@ -9,6 +12,7 @@ CREATE TABLE Arrival (
   Status varchar(255)
 );
 
+//don't know how to insert time with '88:88' or ''
 INSERT INTO Arrival (Time, Flight, Origin, Airline, Hall, Status) VALUES
 ('20:20', 'CX369', 'Shanghai/PVG', 'Cathay Pacific', '', 'Est at 21:33'),
 ('', 'KA5369', '', 'Dragonair', '', ''),
@@ -31,6 +35,7 @@ INSERT INTO Arrival (Time, Flight, Origin, Airline, Hall, Status) VALUES
 ('', 'JL7061', '', 'Japan Airlines', '', ''),
 ('20:45', 'HX693', 'Sapporo', 'Hong Kong Airlines', ' ', 'Est at 21:18');
 
+//Time may be use TimeStamp
 CREATE TABLE Departure (
   Time varchar(5),
   Flight varchar(6),
@@ -40,8 +45,7 @@ CREATE TABLE Departure (
   Status varchar(255)
 );
 
-
-
+//don't know how to insert time with '88:88' or ''
 INSERT INTO Departure (Time, Flight, Destination, Terminal, Gate, Status) VALUES
 ('20:30', 'MH 433', 'Kuala Lumpur', 'T1 ', 28, 'Gate Closed'),
 ('20:30', 'QF 030', 'Melboume', 'T1 ', 25, 'Gate Closed'),
