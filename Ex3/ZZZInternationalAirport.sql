@@ -1,5 +1,7 @@
 CREATE DATABASE IF NOT EXISTS ZZZInternationalAirport;
 
+USE ZZZInternationalAirport;
+
 CREATE TABLE Arrival (
   Time Timestamp,
   Flight varchar(6),
