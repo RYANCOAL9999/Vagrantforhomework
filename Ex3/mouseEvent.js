@@ -1,3 +1,26 @@
+function startTime() {
+    var today = new Date();
+    var yyyy = today.getFullYear();
+    var month = today.getMonth() + 1;
+    var date = today.getDate();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    m = checkTime(m);
+    if(m < 10){
+        document.getElementById('txt').innerHTML = 
+        yyyy+"/"+month +"/" +date+ " " + h + ":0" + m;
+    }
+    else{
+        document.getElementById('txt').innerHTML = 
+        yyyy+"/"+month +"/" +date+ " " + h + ":" + m;
+    }
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 1) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
 $(document).ready(function(){
     $("span.QWE").mousemove(function(){
         document.getElementById("reg").style.color = "red";

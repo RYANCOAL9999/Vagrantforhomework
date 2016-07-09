@@ -7,7 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script type="text/javascript" src="mouseEvent.js"></script>
     </head>
-    <body>
+    <body onload="startTime()">
         <div id="A" style="color: blue">
             <h1>
                 ZZZ International Airport
@@ -23,10 +23,7 @@
                 <b>DEPARTURE</b>         
             </span>     
         </div>  
-        <?php
-        date_default_timezone_set("Asia/Hong_Kong");
-        echo date("Y-m-d") ."&nbsp". date("h:i");
-        ?>
+        <span id="txt"></span>
         <p></p>
     </body>
 </html>
