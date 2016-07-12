@@ -36,7 +36,7 @@ function Transatlantic(){
                 $("#theGrid").jqGrid('setRowData',ids[i],{act:be+se});
            }
         },
-        recordtext: '24 Row(s)',
+        recordtext: '{2} Row(s)',
         caption: 'Transatlantic Schedule',
         height: '100%'
     });
@@ -81,7 +81,7 @@ function Transpacific(){
                 $("#theGrid").jqGrid('setRowData',ids[i],{act:be+se});
             }
         },
-        recordtext: '24 Row(s)',
+        recordtext: '{2} Row(s)',
         caption: 'Transpacific Schedule',
         height: '100%'
     });
