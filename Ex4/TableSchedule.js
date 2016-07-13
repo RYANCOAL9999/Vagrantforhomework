@@ -1,3 +1,18 @@
+$(document).ready(function(){
+   var abc;
+   $(".QWE").click(function(){
+       abc = $(this).attr("name");
+       alert(abc);
+       //Getdata(abc);
+   });
+   $(".IOP").click(function(){
+       abc = $(this).attr("name");
+       alert(abc);
+       //Getdata(abc);
+   });
+  
+});
+
 function Getdata(value){
     
     if($("#theGrid").html() || $("#gridPager").html()){
@@ -70,3 +85,6 @@ function ClickDown(cl){
         }
     }
 }
+
+
+
