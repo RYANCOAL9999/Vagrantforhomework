@@ -54,7 +54,7 @@ function Getdata(value){
             }
         },
         recordtext: '{2} Row(s)',
-        caption: 'Transatlantic Schedule',
+        caption: 'T' + value.substring(1)+ 'Schedule',
         height: '100%'
     });
     
