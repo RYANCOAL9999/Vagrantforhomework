@@ -1,3 +1,6 @@
+var s;
+var arrivalbool = false;
+var departurebool = false;
 function startTime() {
     var today = new Date();
     var yyyy = today.getFullYear();
@@ -15,15 +18,39 @@ function startTime() {
         yyyy+"/"+month +"/" +date+ " " + h + ":" + m;
     }
     var t = setTimeout(startTime, 500);
+    s = today.getSeconds();
+    test();
 }
+
 function checkTime(i) {
     if (i < 1) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
 
-$(document).ready(function(){
+function test(){
     $("span.QWE").mousemove(function(){
         document.getElementById("reg").style.color = "red";
+        arrivalbool = true;
+        departurebool = false;
+    });
+    
+    $("span.QWE").mouseout(function(){
+        document.getElementById("reg").style.color = "black";
+        
+    });
+    
+    $("span.IOP").mousemove(function(){
+        document.getElementById("log").style.color = "blue";
+        departurebool = true;
+        arrivalbool = false;
+    });
+    
+    $("span.IOP").mouseout(function(){
+        document.getElementById("log").style.color = "black";
+    });
+    
+    if(arrivalbool == true ){
+        //console.log(showbool);
         var xmlhttp = new XMLHttpRequest();
         if (window.XMLHttpRequest) { 
             // for IE7+, Firefox, Chrome, Opera, Safari         
@@ -40,16 +67,10 @@ $(document).ready(function(){
         }
         xmlhttp.open("GET",url,true);
         xmlhttp.send();
-    });
+    }
     
-     $("span.QWE").mouseout(function(){
-        document.getElementById("reg").style.color = "black";
-        $("p").html("");
-        
-    })
-    
-    $("span.IOP").mousemove(function(){
-        document.getElementById("log").style.color = "blue";
+    if(departurebool == true){
+        //console.log(showbool);
         var xmlhttp = new XMLHttpRequest();
         if (window.XMLHttpRequest) { 
             // for IE7+, Firefox, Chrome, Opera, Safari         
@@ -66,22 +87,15 @@ $(document).ready(function(){
         }
         xmlhttp.open("GET",url,true);
         xmlhttp.send();
-    })
-    
-     $("span.IOP").mouseout(function(){
-        document.getElementById("log").style.color = "black";
-        $("p").html("");
-    })
-});
+    }
+}
 
 function myFunction(jsonText){
     var arr = JSON.parse(jsonText);
     var out = "<table border='1' style='50'><tr><td style='background-color:aqua'>Time</td><td style='background-color:aqua'>Flight</td><td style='background-color:aqua'>Origin</td><td style='background-color:aqua'>Airline</td><td style='background-color:aqua'>Hall</td><td style='background-color:aqua'>Status</td></tr>";
     for(var i =0;i < arr.length;i++){
-        //substring without date
-        var time = arr[i].Time.substring(10,16);
         out += "<tr><td class='time'>" 
-            + time
+            + arr[i].Time.substring(0,5)
             + "</td><td>" 
             + arr[i].Flight
             + "</td><td>"
@@ -103,10 +117,8 @@ function testFunction(jsonText){
     var arr = JSON.parse(jsonText);
     var out = "<table border='1' style='50'><tr><td style='background-color:yellow'>Time</td><td style='background-color:yellow'>Flight</td><td style='background-color:yellow'>Destination</td><td style='background-color:yellow'>Terminal</td><td style='background-color:yellow'>Gate</td><td style='background-color:yellow'>Status</td></tr>";
     for(var i =0;i < arr.length;i++){
-        //substring without date
-        var time = arr[i].Time.substring(10,16);
         out += "<tr><td>" 
-            +time 
+            + arr[i].Time.substring(0,5)
             + "</td><td>" 
             + arr[i].Flight
             + "</td><td>"
@@ -123,5 +135,3 @@ function testFunction(jsonText){
     $("p").html(out);
     
 }
-
-

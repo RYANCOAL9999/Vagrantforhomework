@@ -1,6 +1,8 @@
 <?php
+require ('GeneralRandomInput.php');
+insertDeparture();
 require ('db.php');
-$query = "select * FROM `Departure`";
+$query = "select `Time`, `Flight`, `Destination`,`Terminal`,`Gate`,`Status` FROM `Departure` WHERE `Date` = CURDATE()";
 $result = mysqli_query($connection, $query) or die(mysql_error());
 
 $emptyarray = array();

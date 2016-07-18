@@ -1,6 +1,6 @@
 <?php
 require ('db.php');
-$query = "select * FROM `Transatlantic`";
+$query = "select `Voyage`, `Vessel`, `DepPort`, `Departure`, `ArrPort`, `Arrival` FROM `Transatlantic`";
 $result = mysqli_query($connection, $query) or die(mysql_error());
 
 $emptyarray = array();

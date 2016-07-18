@@ -1,6 +1,8 @@
 <?php
+require ('GeneralRandomInput.php');
+insertArrival();
 require ('db.php');
-$query = "select * FROM `Arrival`";
+$query = "select `Time`,`Flight`,`Origin`,`Airline`,`Hall`,`Status` FROM `Arrival` WHERE `Date` = CURDATE() ";
 $result = mysqli_query($connection, $query) or die(mysql_error());
 
 $emptyarray = array();
@@ -8,7 +10,7 @@ $emptyarray = array();
 if($result -> num_rows > 0){
     while ($row = $result->fetch_assoc()){
         //handle the value is null with timestamp
-        if($row["Time"] == "0000-00-00 00:00:00"){
+        if($row["Time"] == "00:00:00"){
             $row["Time"]="";
         }
         //put the row to the emptyarray
