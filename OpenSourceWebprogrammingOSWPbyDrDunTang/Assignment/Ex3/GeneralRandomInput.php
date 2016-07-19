@@ -12,6 +12,7 @@ function insertArrival(){
         }
     }
     
+    //check $emptyarray is not empty,if empty, insert random with each columns and rows
     if(!$emptyarray){
         $time = array();
         $Flight = array();
@@ -20,6 +21,7 @@ function insertArrival(){
         $HallAnswer = array();
         $StatusAnswer = array();
         $number = rand(5, 10);
+        //general random with each array
         for($i = 0; $i < $number; $i++){
             $time[$i] = timerandom();
             $Flight[$i] = characterrandom('ABCDEFGHIJKLMNOPQRSTUVWXYZ',2) . characterrandom('0123456789',4);
@@ -32,11 +34,14 @@ function insertArrival(){
             $Status= array(""," ", "Est at", "Cancelled", "At gate");
             $StatusAnswer[$i] = Statusrandom($Status);
         }
+        //sort time with small to big
         sort($time);
+        //sql statement with insert for each array
         for($i = 0; $i < $number; $i++){
             $query = "INSERT INTO Arrival (`Date`,`Time`, `Flight`, `Origin`, `Airline`, `Hall`, `Status`) VALUES 
                      (NOW(), '$time[$i]', '$Flight[$i]', '$OriginAnswer[$i]', '$AirlineAnswer[$i]', '$HallAnswer[$i]', '$StatusAnswer[$i]')";
             $result = mysqli_query($connection, $query);
+            //handles the sql error
             if($result){
                 //echo "successfully";
             }
@@ -62,8 +67,8 @@ function insertDeparture(){
             $emptyarray[] = $row;
         }
     }
-    //echo json_encode($emptyarray);
     
+    //check $emptyarray is not empty,if empty, insert random with each columns and rows
     if(!$emptyarray){
         $time = array();
         $Flight = array();
@@ -72,6 +77,7 @@ function insertDeparture(){
         $Gate = array();
         $StatusAnswer = array();
         $number = rand(5, 10);
+        //general random with each array
         for($i = 0; $i < $number; $i++){
             $time[$i] = timerandom();
             $Flight[$i] = characterrandom('ABCDEFGHIJKLMNOPQRSTUVWXYZ',2) . characterrandom('0123456789',4);
@@ -83,11 +89,14 @@ function insertDeparture(){
             $Status = array("","Gate Closed", "Est", "Boarding Soon");
             $StatusAnswer[$i] = StatusAnswerrandom($Status);
         }
+        //sort time with small to big
         sort($time);
+        //sql statement with insert for each array
         for($i = 0; $i < $number; $i++){
             $query = "INSERT INTO Departure (`Date`,`Time`, `Flight`, `Destination`, `Terminal`, `Gate`, `Status`) VALUES 
                      (NOW(), '$time[$i]]', '$Flight[$i]', '$DestinationAnswer[$i]', '$TerminalAnswer[$i]','$Gate[$i]', '$StatusAnswer[$i]')";
             $result = mysqli_query($connection, $query);
+            //handles the sql error
             if($result){
                 //echo "successfully";
             }
@@ -100,10 +109,11 @@ function insertDeparture(){
     mysqli_close($connection);
     
 }
-
+//random input with Status for insertDeparture function
 function StatusAnswerrandom($StatusArray){
     $StatusAnswer = Newrandom($StatusArray);
     $abc = "";
+    //check with out Boarding Soon or GateClosed
     if($StatusAnswer == "Boarding Soon" || $StatusAnswer == "Gate Closed" ){
         $abc = $StatusAnswer ;
     }
@@ -112,10 +122,11 @@ function StatusAnswerrandom($StatusArray){
     }
     return $abc;
 }
-
+//random input with Status for insertArrival function
 function Statusrandom($StatusArray){
     $StatusAnswer = Newrandom($StatusArray);
     $abc = "";
+    //check with out Cancelled or ""
     if($StatusAnswer == "Cancelled" || $StatusAnswer == " " ){
         $abc = $StatusAnswer;
     }
@@ -124,7 +135,7 @@ function Statusrandom($StatusArray){
     }
     return $abc;
 }
-
+//random input with time without seconds
 function timewithoutSecondrandom(){
     $h = rand(0,23);
     $m = rand(0,59);
@@ -132,7 +143,7 @@ function timewithoutSecondrandom(){
     $minutes = $m < 10 ? "0" . $m : ""+$m;
     return $hour .":" . $minutes;
 }
-
+//random input with time
 function timerandom(){
     $h = rand(0,23);
     $m = rand(0,59);
@@ -140,7 +151,7 @@ function timerandom(){
     $minutes = $m < 10 ? "0" . $m : ""+$m;
     return $hour .":" . $minutes .":00";
 }
-
+//random input with character
 function characterrandom($inputstring,$inputcount){
     $characterString = "";
     for ($i = 0; $i < $inputcount; $i++) {
@@ -148,11 +159,10 @@ function characterrandom($inputstring,$inputcount){
     }
     return $characterString;
 }
-
+//random input with string
 function Newrandom($inputarray){
     $rand_keys = array_rand($inputarray,2);
     return $inputarray[$rand_keys[0]+1];
 }
-
 
 ?>
