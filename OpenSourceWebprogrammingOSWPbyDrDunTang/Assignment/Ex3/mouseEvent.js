@@ -94,7 +94,7 @@ function myFunction(jsonText){
     var arr = JSON.parse(jsonText);
     var out = "<table border='1' style='50'><tr><td style='background-color:aqua'>Time</td><td style='background-color:aqua'>Flight</td><td style='background-color:aqua'>Origin</td><td style='background-color:aqua'>Airline</td><td style='background-color:aqua'>Hall</td><td style='background-color:aqua'>Status</td></tr>";
     for(var i =0;i < arr.length;i++){
-        out += "<tr><td class='time'>" 
+        out += "<tr><td width='15%' align='center'>" 
             + arr[i].Time.substring(0,5)
             + "</td><td>" 
             + arr[i].Flight
@@ -117,15 +117,15 @@ function testFunction(jsonText){
     var arr = JSON.parse(jsonText);
     var out = "<table border='1' style='50'><tr><td style='background-color:yellow'>Time</td><td style='background-color:yellow'>Flight</td><td style='background-color:yellow'>Destination</td><td style='background-color:yellow'>Terminal</td><td style='background-color:yellow'>Gate</td><td style='background-color:yellow'>Status</td></tr>";
     for(var i =0;i < arr.length;i++){
-        out += "<tr><td>" 
+        out += "<tr><td width='15%' align='center'>" 
             + arr[i].Time.substring(0,5)
             + "</td><td>" 
             + arr[i].Flight
             + "</td><td>"
             + arr[i].Destination
-            + "</td><td>"
+            + "</td><td width='15%' align='center'>"
             + arr[i].Terminal
-            + "</td><td>"
+            + "</td><td width='15%' align='center'>"
             + arr[i].Gate
             + "</td><td>"
             + arr[i].Status
