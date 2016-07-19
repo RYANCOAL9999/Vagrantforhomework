@@ -29,7 +29,7 @@ function insertArrival(){
             $OriginAnswer[$i] = Newrandom($Origin);
             $Airline = array("","Cathay Pacific","Dragonair","Hong Kong Airlines","Jetstar Japan","American Airlines","China Airlines","Thai AirAsia","AirAsia","Qatar Airways");
             $AirlineAnswer[$i] = Newrandom($Airline);
-            $Hall = array(""," ","A","C");
+            $Hall = array(""," ","A","B","C");
             $HallAnswer[$i] = Newrandom($Hall);
             $Status= array(""," ", "Est at", "Cancelled", "At gate");
             $StatusAnswer[$i] = Statusrandom($Status);
@@ -83,7 +83,7 @@ function insertDeparture(){
             $Flight[$i] = characterrandom('ABCDEFGHIJKLMNOPQRSTUVWXYZ',2) . characterrandom('0123456789',4);
             $Destination = array("","Kuala Lumpur","Melboume","Xiamen","BangKok","Cheng du","Ningbo","Sydney","Chongqing","Taipei","Manila","Hangzhou","Phuket,BangKok");
             $DestinationAnswer[$i] = Newrandom($Destination);
-            $Terminal = array("","T1","T2");
+            $Terminal = array("","T1","T2","T3","T4");
             $TerminalAnswer[$i] = Newrandom($Terminal);
             $Gate[$i] = characterrandom('0123456789', 3);
             $Status = array("","Gate Closed", "Est", "Boarding Soon");
