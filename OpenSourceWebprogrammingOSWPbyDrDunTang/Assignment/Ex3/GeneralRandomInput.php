@@ -13,21 +13,29 @@ function insertArrival(){
     }
     
     if(!$emptyarray){
+        $time = array();
+        $Flight = array();
+        $OriginAnswer = array();
+        $AirlineAnswer = array();
+        $HallAnswer = array();
+        $StatusAnswer = array();
         $number = rand(5, 10);
         for($i = 0; $i < $number; $i++){
-            $time = timerandom();
-            $Flight = characterrandom('ABCDEFGHIJKLMNOPQRSTUVWXYZ',2) . characterrandom('0123456789',4);
-            $Origin = array("","Shanghai/PVG","Haikou","Da Nang","Osaka/Kansai","Jakarta","Chicago","Kaohsiung","Phuket","Kuala Lumpur","Tokyo/NRT","Sapporo");
-            $OriginAnswer = Newrandom($Origin);
-            $Airline = array("Cathay Pacific","Dragonair","Hong Kong Airlines","Jetstar Japan","American Airlines","China Airlines","Thai AirAsia","AirAsia","Qatar Airways");
-            $AirlineAnswer = Newrandom($Airline);
-            $Hall = array("","A","C");
-            $HallAnswer = Newrandom($Hall);
+            $time[$i] = timerandom();
+            $Flight[$i] = characterrandom('ABCDEFGHIJKLMNOPQRSTUVWXYZ',2) . characterrandom('0123456789',4);
+            $Origin = array(""," ","Shanghai/PVG","Haikou","Da Nang","Osaka/Kansai","Jakarta","Chicago","Kaohsiung","Phuket","Kuala Lumpur","Tokyo/NRT","Sapporo");
+            $OriginAnswer[$i] = Newrandom($Origin);
+            $Airline = array("","Cathay Pacific","Dragonair","Hong Kong Airlines","Jetstar Japan","American Airlines","China Airlines","Thai AirAsia","AirAsia","Qatar Airways");
+            $AirlineAnswer[$i] = Newrandom($Airline);
+            $Hall = array(""," ","A","C");
+            $HallAnswer[$i] = Newrandom($Hall);
             $Status= array(""," ", "Est at", "Cancelled", "At gate");
-            $StatusAnswer = Statusrandom($Status);
-            //echo $StatusAnswer;
+            $StatusAnswer[$i] = Statusrandom($Status);
+        }
+        sort($time);
+        for($i = 0; $i < $number; $i++){
             $query = "INSERT INTO Arrival (`Date`,`Time`, `Flight`, `Origin`, `Airline`, `Hall`, `Status`) VALUES 
-                     (NOW(), '$time', '$Flight', '$OriginAnswer', '$AirlineAnswer', '$HallAnswer', '$StatusAnswer')";
+                     (NOW(), '$time[$i]', '$Flight[$i]', '$OriginAnswer[$i]', '$AirlineAnswer[$i]', '$HallAnswer[$i]', '$StatusAnswer[$i]')";
             $result = mysqli_query($connection, $query);
             if($result){
                 //echo "successfully";
@@ -36,6 +44,7 @@ function insertArrival(){
                 echo "unsuccessfully";
             }
         }
+        
     }
     //close the db connection
     mysqli_close($connection);
@@ -56,19 +65,28 @@ function insertDeparture(){
     //echo json_encode($emptyarray);
     
     if(!$emptyarray){
+        $time = array();
+        $Flight = array();
+        $Destination = array();
+        $TerminalAnswer = array();
+        $Gate = array();
+        $StatusAnswer = array();
         $number = rand(5, 10);
         for($i = 0; $i < $number; $i++){
-            $time = timerandom();
-            $Flight = characterrandom('ABCDEFGHIJKLMNOPQRSTUVWXYZ',2) . characterrandom('0123456789',4);
-            $Destination = array("Kuala Lumpur","Melboume","Xiamen","BangKok","Cheng du","Ningbo","Sydney","Chongqing","Taipei","Manila","Hangzhou","Phuket,BangKok");
-            $DestinationAnswer = Newrandom($Destination);
-            $Terminal = array("T1","T2");
-            $TerminalAnswer = Newrandom($Terminal);
-            $Gate = characterrandom('0123456789', 3);
+            $time[$i] = timerandom();
+            $Flight[$i] = characterrandom('ABCDEFGHIJKLMNOPQRSTUVWXYZ',2) . characterrandom('0123456789',4);
+            $Destination = array("","Kuala Lumpur","Melboume","Xiamen","BangKok","Cheng du","Ningbo","Sydney","Chongqing","Taipei","Manila","Hangzhou","Phuket,BangKok");
+            $DestinationAnswer[$i] = Newrandom($Destination);
+            $Terminal = array("","T1","T2");
+            $TerminalAnswer[$i] = Newrandom($Terminal);
+            $Gate[$i] = characterrandom('0123456789', 3);
             $Status = array("","Gate Closed", "Est", "Boarding Soon");
-            $StatusAnswer = StatusAnswerrandom($Status);
+            $StatusAnswer[$i] = StatusAnswerrandom($Status);
+        }
+        sort($time);
+        for($i = 0; $i < $number; $i++){
             $query = "INSERT INTO Departure (`Date`,`Time`, `Flight`, `Destination`, `Terminal`, `Gate`, `Status`) VALUES 
-                     (NOW(), '$time', '$Flight', '$DestinationAnswer', '$TerminalAnswer','$Gate', '$StatusAnswer')";
+                     (NOW(), '$time[$i]]', '$Flight[$i]', '$DestinationAnswer[$i]', '$TerminalAnswer[$i]','$Gate[$i]', '$StatusAnswer[$i]')";
             $result = mysqli_query($connection, $query);
             if($result){
                 //echo "successfully";
@@ -135,5 +153,6 @@ function Newrandom($inputarray){
     $rand_keys = array_rand($inputarray,2);
     return $inputarray[$rand_keys[0]+1];
 }
+
 
 ?>
