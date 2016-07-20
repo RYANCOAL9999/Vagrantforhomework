@@ -7,7 +7,7 @@ function startTime() {
     var date = today.getDate();
     var h = today.getHours();
     var m = today.getMinutes();
-    
+    //check the m < 10
     if(m < 10){
         document.getElementById('txt').innerHTML = 
         yyyy+"/"+month +"/" +date+ " " + h + ":0" + m;
