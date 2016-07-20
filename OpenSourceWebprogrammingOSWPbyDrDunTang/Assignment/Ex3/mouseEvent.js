@@ -1,4 +1,3 @@
-var s;
 var arrivalbool = false;
 var departurebool = false;
 function startTime() {
@@ -8,7 +7,7 @@ function startTime() {
     var date = today.getDate();
     var h = today.getHours();
     var m = today.getMinutes();
-    m = checkTime(m);
+    
     if(m < 10){
         document.getElementById('txt').innerHTML = 
         yyyy+"/"+month +"/" +date+ " " + h + ":0" + m;
@@ -18,14 +17,9 @@ function startTime() {
         yyyy+"/"+month +"/" +date+ " " + h + ":" + m;
     }
     var t = setTimeout(startTime, 500);
-    s = today.getSeconds();
     test();
 }
 
-function checkTime(i) {
-    if (i < 1) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-}
 
 function test(){
     $("span.QWE").mousemove(function(){
