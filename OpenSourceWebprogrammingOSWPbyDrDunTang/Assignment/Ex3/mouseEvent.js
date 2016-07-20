@@ -16,7 +16,7 @@ function startTime() {
         document.getElementById('txt').innerHTML = 
         yyyy+"/"+month +"/" +date+ " " + h + ":" + m;
     }
-    var t = setTimeout(startTime, 500);
+    setTimeout(startTime, 500);
     test();
 }
 
