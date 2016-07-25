@@ -29,17 +29,22 @@ function insertArrival(){
             $OriginAnswer[$i] = Newrandom($Origin);
             $Airline = array("","Cathay Pacific","Dragonair","Hong Kong Airlines","Jetstar Japan","American Airlines","China Airlines","Thai AirAsia","AirAsia","Qatar Airways");
             $AirlineAnswer[$i] = Newrandom($Airline);
-            $Hall = array(""," ","A","B","C");
-            $HallAnswer[$i] = Newrandom($Hall);
             $Status= array(""," ", "Est at", "Cancelled", "At gate");
             $StatusAnswer[$i] = Statusrandom($Status);
+            $Hall = array("","A","B","C");
+            if(substr($StatusAnswer[$i], -5) == "At gate"){
+                $HallAnswer[$i] = Newrandom($Hall);
+            }
+            else{
+                $HallAnswer[$i] = " ";
+            }
         }
         //sort time with small to big
         sort($time);
         //sql statement with insert for each array
         for($i = 0; $i < $number; $i++){
             $query = "INSERT INTO Arrival (`Date`,`Time`, `Flight`, `Origin`, `Airline`, `Hall`, `Status`) VALUES 
-                     (NOW(), '$time[$i]', '$Flight[$i]', '$OriginAnswer[$i]', '$AirlineAnswer[$i]', '$HallAnswer[$i]', '$StatusAnswer[$i]')";
+                     (NOW(), '$time[$i]', '$Flight[$i]', '$OriginAnswer[$i]', '$AirlineAnswer[$i]', '$HallAnswer[$i]', '$StatusAnswer[$i]' )";
             $result = mysqli_query($connection, $query);
             //handles the sql error
             if($result){
@@ -85,6 +90,8 @@ function insertDeparture(){
             $DestinationAnswer[$i] = Newrandom($Destination);
             $Terminal = array("","T1","T2","T3","T4");
             $TerminalAnswer[$i] = Newrandom($Terminal);
+            $Airline = array("","Cathay Pacific","Dragonair","Hong Kong Airlines","Jetstar Japan","American Airlines","China Airlines","Thai AirAsia","AirAsia","Qatar Airways");
+            $AirlineAnswer[$i] = Newrandom($Airline);
             $Gate[$i] = characterrandom('0123456789', 3);
             $Status = array("","Gate Closed", "Est", "Boarding Soon");
             $StatusAnswer[$i] = StatusAnswerrandom($Status);
@@ -93,8 +100,8 @@ function insertDeparture(){
         sort($time);
         //sql statement with insert for each array
         for($i = 0; $i < $number; $i++){
-            $query = "INSERT INTO Departure (`Date`,`Time`, `Flight`, `Destination`, `Terminal`, `Gate`, `Status`) VALUES 
-                     (NOW(), '$time[$i]]', '$Flight[$i]', '$DestinationAnswer[$i]', '$TerminalAnswer[$i]','$Gate[$i]', '$StatusAnswer[$i]')";
+            $query = "INSERT INTO Departure (`Date`,`Time`, `Flight`, `Destination`, `Terminal`, `Airline`, `Gate`,`Status`) VALUES 
+                     (NOW(), '$time[$i]', '$Flight[$i]', '$DestinationAnswer[$i]', '$TerminalAnswer[$i]', '$AirlineAnswer[$i]', '$Gate[$i]', '$StatusAnswer[$i]' )";
             $result = mysqli_query($connection, $query);
             //handles the sql error
             if($result){

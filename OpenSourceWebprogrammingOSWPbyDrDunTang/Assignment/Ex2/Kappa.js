@@ -1,11 +1,15 @@
 $(document).ready(function(){
     //jquery ajax to get logo data
     $.get("logo.html",function(data){
-        $("#A").html(data); 
+        if(data){
+            $("#A").html(data);
+        }
     });
     //jquery ajax to get login data
     $.get("Kappalogin.html",function(data){
-        $("#B").html(data); 
+        if(data){
+            $("#B").html(data); 
+        }
     });
 });
 //validate for login

@@ -2,7 +2,7 @@
 require ('GeneralRandomInput.php');
 insertDeparture();
 require ('db.php');
-$query = "select `Time`, `Flight`, `Destination`,`Terminal`,`Gate`,`Status` FROM `Departure` WHERE `Date` = CURDATE()";
+$query = "select `Time`, `Flight`, `Destination`,`Terminal`, `Airline`,`Gate`,`Status` FROM `Departure` WHERE `Date` = CURDATE()";
 $result = mysqli_query($connection, $query) or die(mysql_error());
 
 $emptyarray = array();
@@ -13,6 +13,7 @@ if($result -> num_rows > 0){
         $emptyarray[] = $row;
     }
 }
+
 //print out json with emptyarray
 echo json_encode($emptyarray);
 

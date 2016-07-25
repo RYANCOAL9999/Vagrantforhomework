@@ -20,7 +20,6 @@ function startTime() {
     test();
 }
 
-
 function test(){
     $("span.QWE").mousemove(function(){
         document.getElementById("reg").style.color = "red";
@@ -109,7 +108,7 @@ function myFunction(jsonText){
 
 function testFunction(jsonText){
     var arr = JSON.parse(jsonText);
-    var out = "<table border='1' style='50'><tr><td style='background-color:yellow'>Time</td><td style='background-color:yellow'>Flight</td><td style='background-color:yellow'>Destination</td><td style='background-color:yellow'>Terminal</td><td style='background-color:yellow'>Gate</td><td style='background-color:yellow'>Status</td></tr>";
+    var out = "<table border='1' style='50'><tr><td style='background-color:yellow'>Time</td><td style='background-color:yellow'>Flight</td><td style='background-color:yellow'>Destination</td><td style='background-color:yellow'>Terminal</td><td style='background-color:yellow'>Airline</td><td style='background-color:yellow'>Gate</td><td style='background-color:yellow'>Status</td></tr>";
     for(var i =0;i < arr.length;i++){
         out += "<tr><td width='15%' align='center'>" 
             + arr[i].Time.substring(0,5)
@@ -119,6 +118,8 @@ function testFunction(jsonText){
             + arr[i].Destination
             + "</td><td width='15%' align='center'>"
             + arr[i].Terminal
+            + "</td><td>"
+            + arr[i].Airline
             + "</td><td width='15%' align='center'>"
             + arr[i].Gate
             + "</td><td>"
