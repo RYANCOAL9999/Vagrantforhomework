@@ -11,7 +11,6 @@ function insertArrival(){
             $emptyarray[] = $row;
         }
     }
-    
     //check $emptyarray is not empty,if empty, insert random with each columns and rows
     if(!$emptyarray){
         $time = array();
@@ -20,6 +19,7 @@ function insertArrival(){
         $AirlineAnswer = array();
         $HallAnswer = array();
         $StatusAnswer = array();
+        $StatusFinalAnswer = array();
         $number = rand(5, 10);
         //general random with each array
         for($i = 0; $i < $number; $i++){
@@ -30,16 +30,28 @@ function insertArrival(){
             $Airline = array("","Cathay Pacific","Dragonair","Hong Kong Airlines","Jetstar Japan","American Airlines","China Airlines","Thai AirAsia","AirAsia","Qatar Airways");
             $AirlineAnswer[$i] = Newrandom($Airline);
             $Status= array(""," ", "Est at", "Cancelled", "At gate");
-            $StatusAnswer[$i] = Statusrandom($Status);
-            $Hall = array("","","A","B","C");
-            $HallAnswer[$i] = Newrandom($Hall);
+            $StatusAnswer[$i] = Newrandom($Status);
+            $Hall = array("","A","B","C");
+            if($StatusAnswer[$i] == "At gate"){
+                $HallAnswer[$i] = Newrandom($Hall);
+                $StatusFinalAnswer[$i] = $StatusAnswer[$i]." ". timewithoutSecondrandom();
+            } 
+            else{
+                 $HallAnswer[$i] = "";
+                 if($StatusAnswer[$i] =="Est at"){
+                     $StatusFinalAnswer[$i] = $StatusAnswer[$i]." ". timewithoutSecondrandom();
+                 }
+                 if($StatusAnswer[$i] =="Cancelled" || $StatusAnswer[$i] ==" "){
+                     $StatusFinalAnswer[$i] = $StatusAnswer[$i];
+                 }
+            }
         }
         //sort time with small to big
         sort($time);
         //sql statement with insert for each array
         for($i = 0; $i < $number; $i++){
             $query = "INSERT INTO Arrival (`Date`,`Time`, `Flight`, `Origin`, `Airline`, `Hall`, `Status`) VALUES 
-                     (NOW(), '$time[$i]', '$Flight[$i]', '$OriginAnswer[$i]', '$AirlineAnswer[$i]', '$HallAnswer[$i]', '$StatusAnswer[$i]' )";
+                     (NOW(), '$time[$i]', '$Flight[$i]', '$OriginAnswer[$i]', '$AirlineAnswer[$i]', '$HallAnswer[$i]', '$StatusFinalAnswer[$i]' )";
             $result = mysqli_query($connection, $query);
             //handles the sql error
             if($result){
@@ -66,7 +78,6 @@ function insertDeparture(){
             $emptyarray[] = $row;
         }
     }
-    
     //check $emptyarray is not empty,if empty, insert random with each columns and rows
     if(!$emptyarray){
         $time = array();
@@ -76,6 +87,7 @@ function insertDeparture(){
         $AirlineAnswer = array();
         $Gate = array();
         $StatusAnswer = array();
+        $StatusFinalAnswer = "";
         $number = rand(5, 10);
         //general random with each array
         for($i = 0; $i < $number; $i++){
@@ -109,7 +121,6 @@ function insertDeparture(){
     }
     //close the db connection
     mysqli_close($connection);
-    
 }
 //random input with Status for insertDeparture function
 function StatusAnswerrandom($StatusArray){
@@ -118,19 +129,6 @@ function StatusAnswerrandom($StatusArray){
     //check with out Boarding Soon or GateClosed
     if($StatusAnswer == "Boarding Soon" || $StatusAnswer == "Gate Closed" ){
         $abc = $StatusAnswer ;
-    }
-    else{
-        $abc = $StatusAnswer ." ". timewithoutSecondrandom();
-    }
-    return $abc;
-}
-//random input with Status for insertArrival function
-function Statusrandom($StatusArray){
-    $StatusAnswer = Newrandom($StatusArray);
-    $abc = "";
-    //check with out Cancelled or ""
-    if($StatusAnswer == "Cancelled" || $StatusAnswer == " " ){
-        $abc = $StatusAnswer;
     }
     else{
         $abc = $StatusAnswer ." ". timewithoutSecondrandom();
@@ -166,5 +164,4 @@ function Newrandom($inputarray){
     $rand_keys = array_rand($inputarray,2);
     return $inputarray[$rand_keys[0]+1];
 }
-
 ?>
