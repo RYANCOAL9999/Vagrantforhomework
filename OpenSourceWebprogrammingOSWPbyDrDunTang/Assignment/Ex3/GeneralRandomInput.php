@@ -31,13 +31,8 @@ function insertArrival(){
             $AirlineAnswer[$i] = Newrandom($Airline);
             $Status= array(""," ", "Est at", "Cancelled", "At gate");
             $StatusAnswer[$i] = Statusrandom($Status);
-            $Hall = array("","A","B","C");
-            if(substr($StatusAnswer[$i], -5) == "At gate"){
-                $HallAnswer[$i] = Newrandom($Hall);
-            }
-            else{
-                $HallAnswer[$i] = " ";
-            }
+            $Hall = array("","","A","B","C");
+            $HallAnswer[$i] = Newrandom($Hall);
         }
         //sort time with small to big
         sort($time);
@@ -54,7 +49,6 @@ function insertArrival(){
                 echo "unsuccessfully";
             }
         }
-        
     }
     //close the db connection
     mysqli_close($connection);
@@ -79,6 +73,7 @@ function insertDeparture(){
         $Flight = array();
         $Destination = array();
         $TerminalAnswer = array();
+        $AirlineAnswer = array();
         $Gate = array();
         $StatusAnswer = array();
         $number = rand(5, 10);
