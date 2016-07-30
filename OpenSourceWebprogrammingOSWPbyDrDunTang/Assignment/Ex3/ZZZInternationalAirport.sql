@@ -32,7 +32,7 @@ INSERT INTO Arrival (`Date`,`Time`, `Flight`, `Origin`, `Airline`, `Hall`, `Stat
 ('2016-08-05','14:20:00', 'KA123', 'Haikou', 'Dragonair', '', 'Est at 20:03'),
 ('2016-08-05','', 'CX839', '', 'Cathay Pacific', '', ''),
 ('2016-08-05','16:20:00', 'GK9882', 'Haikou', 'Jetstar Japan', '', 'Cancelled'),
-('2016-08-05','18:25:00', 'CX7231', 'Shanghai/PVG', 'Cathay Pacific', 'A', 'Est at 00:03'),
+('2016-08-05','18:25:00', 'CX7231', 'Shanghai/PVG', 'Cathay Pacific', '', 'Est at 00:03'),
 ('2016-08-05','', 'AA9921', '', 'American Airlines', '', ''),
 ('2016-08-05','', 'BA8212', '', 'British Airways', ' ', 'Est at 21:33'),
 ('2016-08-05','20:25:00', 'CX2138', 'Kuala Lumpur', 'Cathay Pacific', 'A', 'At gate 02:36'),
@@ -77,7 +77,7 @@ INSERT INTO Arrival (`Date`,`Time`, `Flight`, `Origin`, `Airline`, `Hall`, `Stat
 INSERT INTO Arrival (`Date`,`Time`, `Flight`, `Origin`, `Airline`, `Hall`, `Status`) VALUES 
 ('2016-08-08', '10:20:00', 'CX558', 'Phuket', 'Cathay Pacific', '', 'Est at 14:31'),
 ('2016-08-08','', 'KA213', '', 'Haikou', '', ''),
-('2016-08-08','12:20:00', 'HX988', 'Kaohsiung', 'Hong Kong Airlines', '', 'At gate 03:12'),
+('2016-08-08','12:20:00', 'HX988', 'Kaohsiung', 'Hong Kong Airlines', 'C', 'At gate 03:12'),
 ('2016-08-08','14:20:00', 'KA123', 'Osaka/kansai', 'Dragonair', '', 'Cancelled'),
 ('2016-08-08','', 'CX982', '', 'Cathay Pacific', '', ''),
 ('2016-08-08','16:20:00', 'GK989', 'Osaka/Kansai', 'Jetstar Japan', '', 'Est at 20:42'),
