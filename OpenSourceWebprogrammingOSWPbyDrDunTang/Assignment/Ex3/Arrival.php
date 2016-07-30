@@ -13,6 +13,8 @@ if($result -> num_rows > 0){
         if($row["Time"] == "00:00:00"){
             $row["Time"]="";
         }
+        $row["Hall"] = checkHall($row["Hall"]);
+        $row["Status"] = checkStatus($row["Status"]);
         //put the row to the emptyarray
         $emptyarray[] = $row;
     }
@@ -25,5 +27,23 @@ echo json_encode($emptyarray);
 
 //close the db connection
 mysqli_close($connection);
+
+function checkHall($data){
+    if($data == "A" || $data == "B" || $data == "C" || $data == "D" || $data == "" ){
+        return $data;
+    }
+    else{
+        return "Error";
+    }
+}
+
+function checkStatus($data){
+    if($data == "Cancelled" || $data == "" || substr($data, 0, 7) == "At gate" || substr($data, 0, 6) == "Est at" ){
+        return $data;
+    }
+    else{
+        return "Error";
+    }
+}
 
 ?>
