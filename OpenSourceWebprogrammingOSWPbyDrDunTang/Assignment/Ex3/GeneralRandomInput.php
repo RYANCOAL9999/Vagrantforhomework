@@ -127,7 +127,7 @@ function StatusAnswerrandom($StatusArray){
     $StatusAnswer = Newrandom($StatusArray);
     $abc = "";
     //check with out Boarding Soon or GateClosed
-    if($StatusAnswer == "Boarding Soon" || $StatusAnswer == "Gate Closed" || $StatusAnswer == "Final Call" || $StatusAnswer == "Boarding"){
+    if($StatusAnswer == "Boarding Soon" || $StatusAnswer == "Gate Closed" || $StatusAnswer == "Final Call" || $StatusAnswer == "Boarding" ){
         $abc = $StatusAnswer ;
     }
     else{
