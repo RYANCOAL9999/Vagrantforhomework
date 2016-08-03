@@ -21,7 +21,7 @@ CREATE TABLE Departure (
     `Destination` varchar(255),
     `Terminal` varchar(2),
     `Airline` varchar(255),
-    `Gate` int(3),
+    `Gate` int(4),
     `Status` varchar(255)
 );
 
