@@ -32,7 +32,7 @@ function checkTerminal($data){
 }
 
 function checkStatus($data){
-    if( $data == "Gate Closed" || $data == "Final Call" || $data == "Boarding" || $data == "Boarding Soon" || $data == "Cancelled" || substr($data, 0, 3) == "Est" ){
+    if( $data == "Gate Closed" || $data == "Final Call" || $data == "Boarding" || $data == "BoardingSoon" || $data == "Cancelled" || substr($data, 0, 3) == "Est" ){
         return $data;        
     }
     else{
