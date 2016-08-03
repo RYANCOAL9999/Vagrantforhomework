@@ -21,7 +21,7 @@ CREATE TABLE Departure (
     `Destination` varchar(255),
     `Terminal` varchar(2),
     `Airline` varchar(255),
-    `Gate` int(4),
+    `Gate` int(3),
     `Status` varchar(255)
 );
 
@@ -86,13 +86,13 @@ INSERT INTO Arrival (`Date`,`Time`, `Flight`, `Origin`, `Airline`, `Hall`, `Stat
 ('2016-08-08','', 'BA9898', '', 'British Airways', ' ', '');
 
 INSERT INTO Departure (`Date`, `Time`, `Flight`, `Destination`, `Terminal`,`Airline`, `Gate`, `Status`) VALUES
-('2016-08-05','10:30:00', 'MH 3192', 'Ningbo', 'T2', 'Dragonair', 28, 'BoardingSoon'),
+('2016-08-05','10:30:00', 'MH 3192', 'Ningbo', 'T2', 'Dragonair', 28, 'Cancelled'),
 ('2016-08-05','12:30:00', 'QF 8878', 'Xiamen', 'T2', 'Cathay Pacific', 25, 'Gate Closed'),
 ('2016-08-05','14:45:00', 'MF 0990', 'Melbounce', 'T1', 'American Airlines', 41, 'Est 14:39'),
 ('2016-08-05','16:45:00', 'TG 878', 'Kuala Lumpur', 'T2', 'American Airlines', 50, 'Gate Closed'),
 ('2016-08-05','18:50:00', 'HX 8787', 'Manila', 'T4', 'British Airlines', 206, 'Gate Closed'),
 ('2016-08-05','20:50:00', 'UO 7263', 'Kuala Lumpur', 'T2', 'American Airlines', 53, 'Est 21:45'),
-('2016-08-05','21:50:00', 'QF 8726', 'Sydney', 'T1', 'Jetsatar Japan', 24, 'BoardingSoon'),
+('2016-08-05','21:50:00', 'QF 8726', 'Sydney', 'T1', 'Jetsatar Japan', 24, 'Cancelled'),
 ('2016-08-05','22:55:00', 'HX 7627', 'Chongqing', 'T3', 'Thai Airlines', 219, 'Est 23:33'),
 
 INSERT INTO Departure (`Date`, `Time`, `Flight`, `Destination`, `Terminal`,`Airline`, `Gate`, `Status`) VALUES
@@ -112,19 +112,19 @@ INSERT INTO Departure (`Date`, `Time`, `Flight`, `Destination`, `Terminal`,`Airl
 
 INSERT INTO Departure (`Date`, `Time`, `Flight`, `Destination`, `Terminal`,`Airline`, `Gate`, `Status`) VALUES
 ('2016-08-07','08:55:00', 'HX 989', 'Xiamen','T1 ', 'Thai Airlines', 219, 'Est 21:40'),
-('2016-08-07','10:55:00', 'BR7672', 'Chengdu', 'T1', 'Japan Airlines', 32, 'BoardingSoon'),
+('2016-08-07','10:55:00', 'BR7672', 'Chengdu', 'T1', 'Japan Airlines', 32, 'Gate Closed'),
 ('2016-08-07','12:00:00', 'SJ 988', 'Ningo', 'T1', 'Dragonair', 201, 'Gate Closed'),
 ('2016-08-07','16:05:00', 'HX8378', 'Kuala Lumpur', 'T1', 'Dragonair', 217, 'Est 12:12'),
-('2016-08-07','20:10:00', 'FD7126', 'Chongqing', 'T2', 'Dragonair', 203, 'BoardingSoon'),
-('2016-08-07','23:10:00', 'KQ8712', 'Manila', 'T1', 'Cathay Pacific', 27, 'BoardingSoon');
+('2016-08-07','20:10:00', 'FD7126', 'Chongqing', 'T2', 'Dragonair', 203, 'Gate Closed'),
+('2016-08-07','23:10:00', 'KQ8712', 'Manila', 'T1', 'Cathay Pacific', 27, 'Est 13:12');
 
 INSERT INTO Departure (`Date`, `Time`, `Flight`, `Destination`, `Terminal`,`Airline`, `Gate`, `Status`) VALUES
-('2016-08-08','10:45:00', 'TG8273', 'Kuala Lumpur', 'T2', 'American Airlines', 50, 'BoardingSoon'),
+('2016-08-08','10:45:00', 'TG8273', 'Kuala Lumpur', 'T2', 'American Airlines', 50, 'Est 18:37'),
 ('2016-08-08','12:50:00', 'HX7678', 'Ningbo', 'T3', 'British Airlines', 206, 'Gate Closed'),
 ('2016-08-08','14:50:00', 'UO2187', 'Ningbo', 'T2', 'American Airlines', 53, 'Gate Closed'),
 ('2016-08-08','15:50:00', 'QF8321', 'Melbounce', 'T2', 'Jetsatar Japan', 24, 'Est at 21:07'),
-('2016-08-08','16:55:00', 'HX7628', 'Cheng du', 'T1', 'Thai Airlines', 219, 'BoardingSoon'),
+('2016-08-08','16:55:00', 'HX7628', 'Cheng du', 'T1', 'Thai Airlines', 219, 'Est 19:36'),
 ('2016-08-08','17:55:00', 'BR2837', 'Chongqing', 'T3', 'Japan Airlines', 32, 'Gate Closed'),
-('2016-08-08','18:00:00', 'SJ9892', 'Hangzhou', 'T1', 'Dragonair', 201, 'BoardingSoon'),
+('2016-08-08','18:00:00', 'SJ9892', 'Hangzhou', 'T1', 'Dragonair', 201, 'Est 23:00'),
 ('2016-08-08','21:05:00', 'HX8728', 'Melbounce', 'T1', 'Dragonair', 217, 'Est 21:35'),
-('2016-08-08','23:10:00', 'FD8218', 'Phunket', 'T2', 'Dragonair', 203, 'BoardingSoon');
+('2016-08-08','23:10:00', 'FD8218', 'Phunket', 'T2', 'Dragonair', 203, 'Gate Closed');
