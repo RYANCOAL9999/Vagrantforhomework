@@ -100,7 +100,7 @@ function insertDeparture(){
             $Airline = array("","Cathay Pacific","Dragonair","Hong Kong Airlines","Jetstar Japan","American Airlines","China Airlines","Thai AirAsia","AirAsia","Qatar Airways");
             $AirlineAnswer[$i] = Newrandom($Airline);
             $Gate[$i] = characterrandom('0123456789', 3);
-            $Status = array("", "Gate Closed", "Final Call", "Boarding", "Est", "Boarding Soon");
+            $Status = array("", "Gate Closed", "Final Call", "Boarding", "Est", "BoardingSoon");
             $StatusAnswer[$i] = StatusAnswerrandom($Status);
         }
         //sort time with small to big
