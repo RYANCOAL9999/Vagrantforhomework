@@ -26,15 +26,15 @@ CREATE TABLE Departure (
 );
 
 INSERT INTO Arrival (`Date`,`Time`, `Flight`, `Origin`, `Airline`, `Hall`, `Status`) VALUES 
-('2016-08-05', '10:20:00', 'CX872', 'Kaohsiung', 'Cathay Pacific', '', 'Est at 00:12'),
+('2016-08-05', '10:20:00', 'CX872', 'Kaohsiung', 'Cathay Pacific', '', 'At gate 00:12'),
 ('2016-08-05','', 'KA812', '', 'Dragonair', '', ''),
 ('2016-08-05','12:30:00', 'HX168', 'Osaka/kansai', 'Hong Kong Airlines', 'C', 'At gate 01:54'),
-('2016-08-05','14:20:00', 'KA123', 'Haikou', 'Dragonair', '', 'Est at 20:03'),
+('2016-08-05','14:20:00', 'KA123', 'Haikou', 'Dragonair', '', 'At gate 20:03'),
 ('2016-08-05','', 'CX839', '', 'Cathay Pacific', '', ''),
 ('2016-08-05','16:20:00', 'GK9882', 'Haikou', 'Jetstar Japan', '', 'Cancelled'),
-('2016-08-05','18:25:00', 'CX7231', 'Shanghai/PVG', 'Cathay Pacific', 'A', 'Est at 00:03'),
+('2016-08-05','18:25:00', 'CX7231', 'Shanghai/PVG', 'Cathay Pacific', 'A', 'At gate 00:03'),
 ('2016-08-05','', 'AA9921', '', 'American Airlines', '', ''),
-('2016-08-05','', 'BA8212', '', 'British Airways', ' ', 'Est at 21:33'),
+('2016-08-05','', 'BA8212', '', 'British Airways', ' ', 'At gate 21:33'),
 ('2016-08-05','20:25:00', 'CX2138', 'Kuala Lumpur', 'Cathay Pacific', 'A', 'At gate 02:36'),
 ('2016-08-05','', 'AA1223', '', 'American Airlines', ' ', ''),
 ('2016-08-05','20:30:00', 'CI8273', 'Da Nang', 'China Airlines', '', 'Cancelled'),
