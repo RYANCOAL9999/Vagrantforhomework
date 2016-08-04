@@ -71,17 +71,17 @@ INSERT INTO Arrival (`Date`,`Time`, `Flight`, `Origin`, `Airline`, `Hall`, `Stat
 ('2016-08-07','', 'CX8723', 'Shanghai/PVG', 'Cathay Pacific', '', ''),
 ('2016-08-07','13:20:00', 'GK8273', 'Osaka/Kansai', 'Jetstar Japan', '', 'Est at 04:47'),
 ('2016-08-07','15:25:00', 'CX9823', 'Jakarta', 'Cathay Pacific', '', 'Est at 04:47'),
-('2016-08-07','', 'AA8921', '', 'American Airlines', 'C', 'At gate 21:10'),
-('2016-08-07','', 'BA821', '', 'British Airways', 'D', 'At gate 21:54');
+('2016-08-07','', 'AA8921', '', 'American Airlines', 'C', 'Est at 21:10'),
+('2016-08-07','', 'BA821', '', 'British Airways', 'D', 'Est at 21:54');
 
 INSERT INTO Arrival (`Date`,`Time`, `Flight`, `Origin`, `Airline`, `Hall`, `Status`) VALUES 
 ('2016-08-08', '10:20:00', 'CX558', 'Phuket', 'Cathay Pacific', '', 'Est at 14:31'),
 ('2016-08-08','', 'KA213', '', 'Haikou', '', ''),
-('2016-08-08','12:20:00', 'HX988', 'Kaohsiung', 'Hong Kong Airlines', '', 'At gate 03:12'),
+('2016-08-08','12:20:00', 'HX988', 'Kaohsiung', 'Hong Kong Airlines', '', 'Est at 03:12'),
 ('2016-08-08','14:20:00', 'KA123', 'Osaka/kansai', 'Dragonair', '', 'Cancelled'),
 ('2016-08-08','', 'CX982', '', 'Cathay Pacific', '', ''),
 ('2016-08-08','16:20:00', 'GK989', 'Osaka/Kansai', 'Jetstar Japan', '', 'Est at 20:42'),
-('2016-08-08','18:25:00', 'CX9823', '', 'Cathay Pacific', 'A', 'At gate 19:58'),
+('2016-08-08','18:25:00', 'CX9823', '', 'Cathay Pacific', 'A', 'Est at 19:58'),
 ('2016-08-08','18:55:00', 'AA7688', 'Tokyo/NRT', 'American Airlines', '', 'Est at 23:55'),
 ('2016-08-08','', 'BA9898', '', 'British Airways', ' ', '');
 
