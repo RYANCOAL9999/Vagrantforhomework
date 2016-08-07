@@ -1,3 +1,16 @@
+var value = "";
+
+function havedata(abc){
+    value = abc;
+}
+
+function startTime() {
+    if(value){
+        Getdata(value);
+    }
+    setTimeout(startTime, 2000);
+}
+
 function Getdata(value){
     
     if($("#theGrid").html() || $("#gridPager").html()){
@@ -14,11 +27,11 @@ function Getdata(value){
             { name: 'Voyage', index: 'Voyage', width: 70, align: "center" }, 
             { name: 'Vessel', index: 'Vessel', width: 90 }, 
             { name: 'DepPort', index: 'DepPort', width: 80 }, 
-            { name: 'Depdate', index: 'Depdate', width: 80, align: "center" }, 
-            { name: 'Deptime', index: 'Deptime', width: 80, align: "center" }, 
+            { name: 'DepDate', index: 'Depdate', width: 80, align: "center" }, 
+            { name: 'DepTime', index: 'Deptime', width: 80, align: "center" }, 
             { name: 'ArrPort', index: 'ArrPort', width: 80 }, 
-            { name: 'Arrdate', index: 'Arrdate', width: 80, align: "center" }, 
-            { name: 'Arrtime', index: 'Arrtime', width: 70, align: "right" }
+            { name: 'ArrDate', index: 'Arrdate', width: 80, align: "center" }, 
+            { name: 'ArrTime', index: 'Arrtime', width: 70, align: "right" }
         ],
         gridview: true,
         rownumbers: false,

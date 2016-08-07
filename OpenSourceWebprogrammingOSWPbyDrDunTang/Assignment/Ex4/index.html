@@ -11,14 +11,14 @@
         <script src="jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="TableSchedule.js"></script>
     </head>
-    <body>
+    <body onload="startTime()">
         <div style="color: blue">
             <h1>
                 FAST Container Shipping Line
             </h1>
         </div>
-        <input type="button" value="Transatlantic" name="transatlantic" onclick="Getdata('transatlantic')">
-        <input type="button" value="Transpacific" name="transpacific" onclick="Getdata('transpacific')">               
+        <input type="button" value="transatlantic" name="transatlantic" onclick="havedata('transatlantic')">
+        <input type="button" value="transpacific" name="transpacific" onclick="havedata('transpacific')">               
         <br>
         <br>
         <table id="theGrid"></table>
