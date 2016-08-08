@@ -1,22 +1,20 @@
 var value = "";
-
+//get value for using whole php
 function havedata(abc){
-    value = abc;
-}
-
+    value = abc;}
+//set autoupdate time with refresh button click
 function startTime() {
     if(value){
-        Getdata(value);
-    }
+        Getdata(value);}
     setTimeout(startTime, 2000);
 }
-
+//using jqGrid to show the answer
 function Getdata(value){
-    
+    //check no think on the jqGrid and delete them
     if($("#theGrid").html() || $("#gridPager").html()){
         $.jgrid.gridUnload("#theGrid");  
     }
-    
+    //handle jqgrid with the items
     $("#theGrid").jqGrid({
         url: value + ".php", 
         datatype: "json",
@@ -55,9 +53,7 @@ function Getdata(value){
         caption: 'T' + value.substring(1) + ' Schedule',
         height: '100%'
     });
-    
     $("#theGrid").jqGrid('navGrid','#gridPager',{edit:false,add:false,del:false});
-    
 }
 
 var abc = ["Voyage","Vessel","DepPort","Depdate","Deptime","ArrPort","Arrdate","Arrtime"];
