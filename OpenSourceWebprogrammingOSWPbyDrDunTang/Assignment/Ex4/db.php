@@ -6,18 +6,18 @@ if(!$connection){
 //else{
 //    die("Database Connection or Selection successful");
 //}
-
+//handle the Port without error input
 function checkPort($data){
     if (!preg_match("/^[a-zA-Z\s\/]+$/", $data)){
         return "Error";
     }
     return $data;    
 }
-
+//handle the time without second
 function getbackTime($data){
     return substr($data, 0,-3);
 }
-
+//handle the Vessel without error input using self thinking about 's pre_match
 function checkVessel($data){
     $str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ";
     $arr1 = str_split($str);
@@ -33,7 +33,6 @@ function checkVessel($data){
             }
         }
     }
-   
     foreach ($numberbool as $value) {
         if($value == 0){
             return "Error";
@@ -41,6 +40,5 @@ function checkVessel($data){
     }
     return $data;
 }
-
 ?>
 
