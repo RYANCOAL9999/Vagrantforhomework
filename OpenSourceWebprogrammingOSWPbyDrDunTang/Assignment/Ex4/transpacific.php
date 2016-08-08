@@ -2,7 +2,6 @@
 require ('db.php');
 $query = "select `Voyage`, `Vessel`, `DepPort`, `DepDate`, `DepTime`, `ArrPort`, `ArrDate`, `ArrTime` FROM `Transpacific`";
 $result = mysqli_query($connection, $query) or die(mysql_error());
-
 $emptyarray = array();
 //error handles checking with result and put to the num_rows
 if($result -> num_rows > 0){
