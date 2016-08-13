@@ -1,30 +1,17 @@
-var value = "";
-
-function havedata(abc){
-    value = abc;
-}
-
-function startTime() {
-    if(value){
-        Getdata(value);
-    }
-    setTimeout(startTime, 2000);
-}
-
+//use jqGrid to load the table
 function Getdata(value){
-    
+    //if not data in the jqGird, it will unload the Grid table
     if($("#theGrid").html() || $("#gridPager").html()){
         $.jgrid.gridUnload("#theGrid");  
     }
-    
+    //load the Grid table for the php
     $("#theGrid").jqGrid({
-        url: value + ".php", 
-        datatype: "json",
-        loadonce:true,
-        colNames: ['Action', 'Voyage', 'Vessel', 'Dep Port', 'Dep Date', 'Dep Time', 'Arr Port', 'Arr Date', 'Arr Time'],
-        colModel: [
-            { name:'act',index:'act', width:80,sortable:false, align: "center" },
-            { name: 'Voyage', index: 'Voyage', width: 70, align: "center" }, 
+        url: value + ".php",  //get handle with string php
+        datatype: "json",     //get the type with data
+        loadonce:true,        //make grid can load pages
+        colNames: ['Voyage', 'Vessel', 'Dep Port', 'Dep Date', 'Dep Time', 'Arr Port', 'Arr Date', 'Arr Time'], //column name
+        colModel: [   //column values for json data
+            { name: 'Voyage', index: 'Voyage', width: 70, align: "center" },  
             { name: 'Vessel', index: 'Vessel', width: 90 }, 
             { name: 'DepPort', index: 'DepPort', width: 80 }, 
             { name: 'DepDate', index: 'Depdate', width: 80, align: "center" }, 
@@ -33,8 +20,8 @@ function Getdata(value){
             { name: 'ArrDate', index: 'Arrdate', width: 80, align: "center" }, 
             { name: 'ArrTime', index: 'Arrtime', width: 70, align: "right" }
         ],
-        gridview: true,
-        rownumbers: false,
+        gridview: true, 
+        rownumbers: false,  
         rowNum: 5,
         rowList: [5,10,15,20,24],
         pager: '#gridPager',
@@ -42,47 +29,17 @@ function Getdata(value){
         sortname: 'Voyage asc, Vessel asc, DepPort asc, Depdate asc, Deptime asc, ArrPort asc, Arrdate asc, Arrtime asc',
         sortorder: 'asc',
         viewrecords : true,
-        gridComplete: function(){
-            var ids = $("#theGrid").jqGrid('getDataIDs');
-            for (var i in ids){
-                var cl = ids[i];
-                var be = '<input style="height:22px;width:30px;" type="button" value="UP" onclick='+ "ClickUp(" + cl + ")" +' />'; 
-                var se = '<input style="height:22px;width:50px;" type="button" value="Down" onclick='+ "ClickDown(" + cl + ")" +' />';
-                $("#theGrid").jqGrid('setRowData',ids[i],{act:be+se});
-            }
-        },
         recordtext: '{2} Row(s)',
         caption: 'T' + value.substring(1) + ' Schedule',
         height: '100%'
     });
-    
+    //load navGrid
     $("#theGrid").jqGrid('navGrid','#gridPager',{edit:false,add:false,del:false});
-    
 }
-
-var abc = ["Voyage","Vessel","DepPort","Depdate","Deptime","ArrPort","Arrdate","Arrtime"];
-
-function ClickUp(cl){
-    if(cl != 1){
-        for (var x in abc){
-            var value = $("#theGrid").jqGrid('getCell',cl-1,abc[x]);
-            var nextvalue = $("#theGrid").jqGrid('getCell',cl,abc[x]);
-            $("#theGrid").jqGrid('setCell',cl-1,abc[x],nextvalue);
-            $("#theGrid").jqGrid('setCell',cl,abc[x],value);
-        }
-    }
-}
-
-function ClickDown(cl){
-    if (cl != 5){
-        for(var x in abc){
-            var value = $("#theGrid").jqGrid('getCell',cl,abc[x]);
-            var nextvalue = $("#theGrid").jqGrid('getCell',cl+1,abc[x]);
-            $("#theGrid").jqGrid('setCell',cl,abc[x],nextvalue);
-            $("#theGrid").jqGrid('setCell',cl+1,abc[x],value);
-        }
-    }
-}
-
-
-
+//set timeout to autorefresh
+var time = setInterval(function(){
+    //set GridParam with json
+    jQuery('#theGrid').jqGrid('setGridParam', {datatype: 'json'});
+    //refresh the Grid with trigger
+    jQuery('#theGrid').trigger('reloadGrid',[{current:true}]);
+},30000);

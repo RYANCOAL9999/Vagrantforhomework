@@ -7,4 +7,3 @@ if(!$connection){
 //    die("Database Connection or Selection successful");
 //}
 ?>
-

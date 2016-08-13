@@ -1,4 +1,5 @@
 <?php
+//auto insert Arrival table without any data
 function insertArrival(){
     require ('db.php');
     $query = "select `Date` FROM `Arrival` WHERE `Date` = CURDATE()";
@@ -7,12 +8,13 @@ function insertArrival(){
     //error handles checking with result and put to the num_rows
     if($result -> num_rows > 0){
         while ($row = $result->fetch_assoc()){
-        //put the row to the emptyarray
+            //put the row to the emptyarray
             $emptyarray[] = $row;
         }
     }
     //check $emptyarray is not empty,if empty, insert random with each columns and rows
     if(!$emptyarray){
+        // instantiate the time,flight,OriginAnswer,HallAnswer,StatusAnswer,StatusFinalAnswer to array
         $time = array();
         $Flight = array();
         $OriginAnswer = array();
@@ -65,7 +67,7 @@ function insertArrival(){
     //close the db connection
     mysqli_close($connection);
 }
-
+//auto insert Departure table without any data
 function insertDeparture(){
     require ('db.php');
     $query = "select `Date` FROM `Departure` WHERE `Date` = CURDATE()";
@@ -80,6 +82,7 @@ function insertDeparture(){
     }
     //check $emptyarray is not empty,if empty, insert random with each columns and rows
     if(!$emptyarray){
+        // instantiate the time, flight, Destination, TerminalAnswer, AirlineAnswer, StatusAnswer, StatusFinalAnswer to array
         $time = array();
         $Flight = array();
         $Destination = array();
@@ -100,7 +103,7 @@ function insertDeparture(){
             $Airline = array("","Cathay Pacific","Dragonair","Hong Kong Airlines","Jetstar Japan","American Airlines","China Airlines","Thai AirAsia","AirAsia","Qatar Airways");
             $AirlineAnswer[$i] = Newrandom($Airline);
             $Gate[$i] = characterrandom('0123456789', 3);
-            $Status = array("", "Gate Closed", "Final Call", "Boarding", "Est", "BoardingSoon");
+            $Status = array("","Gate Closed", "Est", "Boarding Soon");
             $StatusAnswer[$i] = StatusAnswerrandom($Status);
         }
         //sort time with small to big
@@ -126,8 +129,8 @@ function insertDeparture(){
 function StatusAnswerrandom($StatusArray){
     $StatusAnswer = Newrandom($StatusArray);
     $abc = "";
-    //check with out Boarding Soon or GateClosed
-    if($StatusAnswer == "Boarding Soon" || $StatusAnswer == "Gate Closed" || $StatusAnswer == "Final Call" || $StatusAnswer == "Boarding" ){
+    //check with out Boarding Soon or GateClosed, if not 
+    if($StatusAnswer == "Boarding Soon" || $StatusAnswer == "Gate Closed" || $StatusAnswer ==""){
         $abc = $StatusAnswer ;
     }
     else{
