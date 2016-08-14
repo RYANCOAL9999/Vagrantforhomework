@@ -6,6 +6,13 @@ if(!$connection){
 //else{
 //    die("Database Connection or Selection successful");
 //}
+//handle the Voyage length is 4
+function checkVoyage($data){
+    if (strlen((string)$data) != 4 || $data < 1){
+        return "Error";
+    }
+    return $data;
+}
 //handle the Port without error input
 function checkPort($data){
     if (!preg_match("/^[a-zA-Z\s\/]+$/", $data)){
@@ -27,7 +34,7 @@ function checkVessel($data){
     for($index = 0; $index < sizeof($arr2);$index++){   
         $numberbool[] = 0;
     }
-    //if x =y, numberbool = 1
+    //if x = y, numberbool = 1
     for ($x = 0; $x < sizeof($arr1); $x++) {    
         for ($y = 0; $y < sizeof($arr2); $y++) {
             if($arr1[$x] == $arr2[$y]){

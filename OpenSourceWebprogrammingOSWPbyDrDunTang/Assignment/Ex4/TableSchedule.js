@@ -9,6 +9,7 @@ function Getdata(value){
         url: value + ".php",  //get handle with string php
         datatype: "json",     //get the type with data
         loadonce:true,        //make grid can load pages
+        loadui: 'disable',    //stop loading UI pages
         colNames: ['Voyage', 'Vessel', 'Dep Port', 'Dep Date', 'Dep Time', 'Arr Port', 'Arr Date', 'Arr Time'], //column name
         colModel: [   //column values for json data
             { name: 'Voyage', index: 'Voyage', width: 70, align: "center" },  
@@ -26,20 +27,19 @@ function Getdata(value){
         rowList: [5,10,15,20,24],
         pager: '#gridPager',
         multiSort: true,
-        sortname: 'Voyage asc, Vessel asc, DepPort asc, Depdate asc, Deptime asc, ArrPort asc, Arrdate asc, Arrtime asc',
-        sortorder: 'asc',
+        sortable:true,
         viewrecords : true,
         recordtext: '{2} Row(s)',
         caption: 'T' + value.substring(1) + ' Schedule',
         height: '100%'
     });
     //load navGrid
-    $("#theGrid").jqGrid('navGrid','#gridPager',{edit:false,add:false,del:false});
+    $("#theGrid").jqGrid('navGrid', '#gridPager', {edit:false,add:false,del:false});
 }
 //set timeout to autorefresh
 var time = setInterval(function(){
     //set GridParam with json
     jQuery('#theGrid').jqGrid('setGridParam', {datatype: 'json'});
     //refresh the Grid with trigger
-    jQuery('#theGrid').trigger('reloadGrid',[{current:true}]);
+    jQuery('#theGrid').trigger('reloadGrid', [{current:true}]);
 },30000);
