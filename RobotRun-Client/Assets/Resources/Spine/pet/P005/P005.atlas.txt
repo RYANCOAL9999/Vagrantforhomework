@@ -1,0 +1,62 @@
+
+P005.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+polarBackEar
+  rotate: false
+  xy: 463, 220
+  size: 26, 26
+  orig: 26, 26
+  offset: 0, 0
+  index: -1
+polarBackHand
+  rotate: false
+  xy: 401, 141
+  size: 60, 105
+  orig: 60, 105
+  offset: 0, 0
+  index: -1
+polarBackLeg
+  rotate: true
+  xy: 2, 2
+  size: 73, 127
+  orig: 73, 127
+  offset: 0, 0
+  index: -1
+polarBody
+  rotate: false
+  xy: 2, 77
+  size: 322, 169
+  orig: 322, 169
+  offset: 0, 0
+  index: -1
+polarFrontEar
+  rotate: false
+  xy: 239, 45
+  size: 26, 30
+  orig: 26, 30
+  offset: 0, 0
+  index: -1
+polarFrontHand
+  rotate: true
+  xy: 131, 15
+  size: 60, 106
+  orig: 60, 106
+  offset: 0, 0
+  index: -1
+polarFrontLeg
+  rotate: false
+  xy: 326, 119
+  size: 73, 127
+  orig: 73, 127
+  offset: 0, 0
+  index: -1
+polarTail
+  rotate: false
+  xy: 326, 82
+  size: 31, 35
+  orig: 31, 35
+  offset: 0, 0
+  index: -1

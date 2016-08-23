@@ -1,0 +1,433 @@
+
+C002Head.png
+size: 1933,720
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+NBBHairb
+  rotate: true
+  xy: 1087, 506
+  size: 212, 193
+  orig: 212, 193
+  offset: 0, 0
+  index: -1
+NBBHead2
+  rotate: true
+  xy: 180, 5
+  size: 186, 209
+  orig: 186, 209
+  offset: 0, 0
+  index: -1
+VgtGlasses
+  rotate: true
+  xy: 1249, 2
+  size: 44, 46
+  orig: 44, 46
+  offset: 0, 0
+  index: -1
+assasinMask
+  rotate: false
+  xy: 1100, 302
+  size: 154, 202
+  orig: 154, 202
+  offset: 0, 0
+  index: -1
+baseballHead
+  rotate: false
+  xy: 669, 489
+  size: 214, 229
+  orig: 214, 229
+  offset: 0, 0
+  index: -1
+captainHead
+  rotate: true
+  xy: 1337, 532
+  size: 186, 144
+  orig: 186, 144
+  offset: 0, 0
+  index: -1
+cinderhead
+  rotate: false
+  xy: 1712, 499
+  size: 78, 84
+  orig: 78, 84
+  offset: 0, 0
+  index: -1
+cinderhead2
+  rotate: false
+  xy: 1828, 67
+  size: 83, 65
+  orig: 83, 65
+  offset: 0, 0
+  index: -1
+cowHead
+  rotate: true
+  xy: 423, 222
+  size: 246, 229
+  orig: 246, 229
+  offset: 0, 0
+  index: -1
+cowneck
+  rotate: false
+  xy: 952, 233
+  size: 66, 38
+  orig: 66, 38
+  offset: 0, 0
+  index: -1
+crimeface
+  rotate: false
+  xy: 544, 195
+  size: 28, 25
+  orig: 28, 25
+  offset: 0, 0
+  index: -1
+crimehat
+  rotate: true
+  xy: 1797, 373
+  size: 119, 114
+  orig: 119, 114
+  offset: 0, 0
+  index: -1
+deer_hat
+  rotate: false
+  xy: 1149, 48
+  size: 199, 199
+  orig: 199, 199
+  offset: 0, 0
+  index: -1
+face1
+  rotate: false
+  xy: 1169, 249
+  size: 87, 51
+  orig: 87, 51
+  offset: 0, 0
+  index: -1
+face2
+  rotate: true
+  xy: 1635, 3
+  size: 87, 51
+  orig: 87, 51
+  offset: 0, 0
+  index: -1
+face3
+  rotate: true
+  xy: 1688, 3
+  size: 87, 51
+  orig: 87, 51
+  offset: 0, 0
+  index: -1
+face4
+  rotate: true
+  xy: 1741, 3
+  size: 87, 51
+  orig: 87, 51
+  offset: 0, 0
+  index: -1
+faceless
+  rotate: false
+  xy: 1530, 368
+  size: 160, 164
+  orig: 160, 164
+  offset: 0, 0
+  index: -1
+fish_head01
+  rotate: false
+  xy: 391, 5
+  size: 190, 186
+  orig: 190, 186
+  offset: 0, 0
+  index: -1
+fish_head02
+  rotate: true
+  xy: 892, 231
+  size: 40, 58
+  orig: 40, 58
+  offset: 0, 0
+  index: -1
+fish_head03
+  rotate: false
+  xy: 583, 4
+  size: 124, 216
+  orig: 124, 216
+  offset: 0, 0
+  index: -1
+foressthead_b
+  rotate: true
+  xy: 1092, 249
+  size: 22, 75
+  orig: 22, 75
+  offset: 0, 0
+  index: -1
+forestHat
+  rotate: true
+  xy: 1633, 92
+  size: 161, 118
+  orig: 161, 118
+  offset: 0, 0
+  index: -1
+foresthead_a
+  rotate: false
+  xy: 2, 454
+  size: 246, 264
+  orig: 246, 264
+  offset: 0, 0
+  index: -1
+girlhead
+  rotate: true
+  xy: 1687, 260
+  size: 106, 85
+  orig: 106, 85
+  offset: 0, 0
+  index: -1
+girlhead-01
+  rotate: false
+  xy: 2, 3
+  size: 176, 184
+  orig: 176, 184
+  offset: 0, 0
+  index: -1
+girlhead-01b
+  rotate: false
+  xy: 1352, 346
+  size: 176, 184
+  orig: 176, 184
+  offset: 0, 0
+  index: -1
+girlhead-03
+  rotate: true
+  xy: 1149, 2
+  size: 44, 98
+  orig: 44, 98
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 1464, 253
+  size: 94, 91
+  orig: 94, 91
+  offset: 0, 0
+  index: -1
+hoodie1
+  rotate: true
+  xy: 892, 273
+  size: 215, 206
+  orig: 215, 206
+  offset: 0, 0
+  index: -1
+hoodie2
+  rotate: true
+  xy: 941, 14
+  size: 215, 206
+  orig: 215, 206
+  offset: 0, 0
+  index: -1
+ironhair
+  rotate: true
+  xy: 1774, 220
+  size: 147, 150
+  orig: 147, 150
+  offset: 0, 0
+  index: -1
+leaf
+  rotate: true
+  xy: 1282, 528
+  size: 190, 53
+  orig: 190, 53
+  offset: 0, 0
+  index: -1
+lolita_hair_a
+  rotate: true
+  xy: 1461, 3
+  size: 70, 109
+  orig: 70, 109
+  offset: 0, 0
+  index: -1
+lolita_hair_b
+  rotate: true
+  xy: 1350, 2
+  size: 71, 109
+  orig: 71, 109
+  offset: 0, 0
+  index: -1
+lolita_ribon
+  rotate: true
+  xy: 1256, 308
+  size: 196, 94
+  orig: 196, 94
+  offset: 0, 0
+  index: -1
+memaidhair
+  rotate: false
+  xy: 885, 490
+  size: 200, 228
+  orig: 200, 228
+  offset: 0, 0
+  index: -1
+memaidstar
+  rotate: true
+  xy: 1692, 431
+  size: 66, 97
+  orig: 66, 97
+  offset: 0, 0
+  index: -1
+momo-24
+  rotate: false
+  xy: 1350, 75
+  size: 168, 175
+  orig: 168, 175
+  offset: 0, 0
+  index: -1
+momofront_hairc
+  rotate: true
+  xy: 1626, 255
+  size: 111, 59
+  orig: 111, 59
+  offset: 0, 0
+  index: -1
+momohair2c
+  rotate: true
+  xy: 1572, 7
+  size: 67, 61
+  orig: 67, 61
+  offset: 0, 0
+  index: -1
+mummy_01
+  rotate: true
+  xy: 1692, 369
+  size: 60, 103
+  orig: 60, 103
+  offset: 0, 0
+  index: -1
+mummy_head01
+  rotate: false
+  xy: 1774, 589
+  size: 157, 129
+  orig: 157, 129
+  offset: 0, 0
+  index: -1
+mummy_head02
+  rotate: true
+  xy: 1020, 240
+  size: 31, 70
+  orig: 31, 70
+  offset: 0, 0
+  index: -1
+mummy_head03
+  rotate: true
+  xy: 423, 193
+  size: 27, 119
+  orig: 27, 119
+  offset: 0, 0
+  index: -1
+mummy_head04
+  rotate: true
+  xy: 1794, 494
+  size: 93, 132
+  orig: 93, 132
+  offset: 0, 0
+  index: -1
+pumpkin_head01
+  rotate: false
+  xy: 166, 193
+  size: 255, 259
+  orig: 255, 259
+  offset: 0, 0
+  index: -1
+pumpkin_head02
+  rotate: true
+  xy: 1753, 124
+  size: 94, 73
+  orig: 94, 73
+  offset: 0, 0
+  index: -1
+pumpkin_head03
+  rotate: false
+  xy: 1626, 535
+  size: 84, 48
+  orig: 84, 48
+  offset: 0, 0
+  index: -1
+samuraihead
+  rotate: false
+  xy: 654, 231
+  size: 236, 242
+  orig: 236, 242
+  offset: 0, 0
+  index: -1
+samuraihead2
+  rotate: true
+  xy: 2, 189
+  size: 263, 162
+  orig: 263, 162
+  offset: 0, 0
+  index: -1
+santa_face
+  rotate: false
+  xy: 1362, 253
+  size: 100, 91
+  orig: 100, 91
+  offset: 0, 0
+  index: -1
+santa_hat
+  rotate: true
+  xy: 1483, 534
+  size: 184, 141
+  orig: 184, 141
+  offset: 0, 0
+  index: -1
+schoolribon2
+  rotate: true
+  xy: 1828, 134
+  size: 84, 86
+  orig: 84, 86
+  offset: 0, 0
+  index: -1
+sheepHead
+  rotate: true
+  xy: 250, 470
+  size: 248, 207
+  orig: 248, 207
+  offset: 0, 0
+  index: -1
+spacehelmet
+  rotate: true
+  xy: 709, 10
+  size: 219, 230
+  orig: 219, 230
+  offset: 0, 0
+  index: -1
+starhead
+  rotate: true
+  xy: 459, 475
+  size: 243, 208
+  orig: 243, 208
+  offset: 0, 0
+  index: -1
+swHair3
+  rotate: true
+  xy: 1560, 254
+  size: 112, 64
+  orig: 112, 64
+  offset: 0, 0
+  index: -1
+thunder_head_ab
+  rotate: false
+  xy: 1258, 252
+  size: 102, 54
+  orig: 102, 54
+  offset: 0, 0
+  index: -1
+tinhauGlasses
+  rotate: true
+  xy: 1520, 76
+  size: 175, 111
+  orig: 175, 111
+  offset: 0, 0
+  index: -1
+worker_hat
+  rotate: false
+  xy: 1626, 585
+  size: 144, 133
+  orig: 144, 133
+  offset: 0, 0
+  index: -1

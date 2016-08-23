@@ -1,0 +1,146 @@
+
+P009.png
+size: 698,286
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer_1
+  rotate: false
+  xy: 143, 2
+  size: 138, 45
+  orig: 138, 45
+  offset: 0, 0
+  index: -1
+Layer_10
+  rotate: true
+  xy: 170, 121
+  size: 163, 91
+  orig: 163, 91
+  offset: 0, 0
+  index: -1
+Layer_11
+  rotate: true
+  xy: 517, 32
+  size: 105, 81
+  orig: 105, 81
+  offset: 0, 0
+  index: -1
+Layer_12
+  rotate: false
+  xy: 600, 106
+  size: 96, 81
+  orig: 96, 81
+  offset: 0, 0
+  index: -1
+Layer_13
+  rotate: false
+  xy: 600, 3
+  size: 44, 41
+  orig: 44, 41
+  offset: 0, 0
+  index: -1
+Layer_14
+  rotate: false
+  xy: 646, 9
+  size: 31, 35
+  orig: 31, 35
+  offset: 0, 0
+  index: -1
+Layer_15
+  rotate: false
+  xy: 544, 140
+  size: 39, 47
+  orig: 39, 47
+  offset: 0, 0
+  index: -1
+Layer_16
+  rotate: true
+  xy: 517, 9
+  size: 21, 35
+  orig: 21, 35
+  offset: 0, 0
+  index: -1
+Layer_17
+  rotate: true
+  xy: 600, 46
+  size: 58, 73
+  orig: 58, 73
+  offset: 0, 0
+  index: -1
+Layer_18
+  rotate: true
+  xy: 283, 4
+  size: 52, 61
+  orig: 52, 61
+  offset: 0, 0
+  index: -1
+Layer_3
+  rotate: false
+  xy: 2, 2
+  size: 139, 45
+  orig: 139, 45
+  offset: 0, 0
+  index: -1
+Layer_4
+  rotate: true
+  xy: 2, 49
+  size: 235, 166
+  orig: 235, 166
+  offset: 0, 0
+  index: -1
+Layer_5
+  rotate: true
+  xy: 248, 58
+  size: 61, 95
+  orig: 61, 95
+  offset: 0, 0
+  index: -1
+Layer_6
+  rotate: true
+  xy: 478, 19
+  size: 118, 37
+  orig: 118, 37
+  offset: 0, 0
+  index: -1
+Layer_7
+  rotate: false
+  xy: 170, 53
+  size: 76, 66
+  orig: 76, 66
+  offset: 0, 0
+  index: -1
+Layer_8
+  rotate: true
+  xy: 346, 5
+  size: 122, 130
+  orig: 122, 130
+  offset: 0, 0
+  index: -1
+Layer_9
+  rotate: true
+  xy: 263, 129
+  size: 155, 85
+  orig: 155, 85
+  offset: 0, 0
+  index: -1
+guneffect0001
+  rotate: true
+  xy: 350, 139
+  size: 145, 95
+  orig: 145, 95
+  offset: 0, 0
+  index: -1
+guneffect0002
+  rotate: true
+  xy: 447, 139
+  size: 145, 95
+  orig: 145, 95
+  offset: 0, 0
+  index: -1
+guneffect0003
+  rotate: false
+  xy: 544, 189
+  size: 145, 95
+  orig: 145, 95
+  offset: 0, 0
+  index: -1

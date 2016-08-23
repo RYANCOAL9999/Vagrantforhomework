@@ -1,0 +1,62 @@
+
+P006.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pandaBackEar
+  rotate: false
+  xy: 463, 218
+  size: 26, 27
+  orig: 26, 27
+  offset: 0, 0
+  index: -1
+pandaBackHand
+  rotate: false
+  xy: 400, 138
+  size: 61, 107
+  orig: 61, 107
+  offset: 0, 0
+  index: -1
+pandaBackLeg
+  rotate: false
+  xy: 326, 118
+  size: 72, 127
+  orig: 72, 127
+  offset: 0, 0
+  index: -1
+pandaBody
+  rotate: false
+  xy: 2, 76
+  size: 322, 169
+  orig: 322, 169
+  offset: 0, 0
+  index: -1
+pandaFrontEar
+  rotate: false
+  xy: 244, 44
+  size: 25, 30
+  orig: 25, 30
+  offset: 0, 0
+  index: -1
+pandaFrontHand
+  rotate: true
+  xy: 133, 13
+  size: 61, 109
+  orig: 61, 109
+  offset: 0, 0
+  index: -1
+pandaFrontLeg
+  rotate: true
+  xy: 2, 2
+  size: 72, 129
+  orig: 72, 129
+  offset: 0, 0
+  index: -1
+pandaTail
+  rotate: false
+  xy: 326, 81
+  size: 31, 35
+  orig: 31, 35
+  offset: 0, 0
+  index: -1
